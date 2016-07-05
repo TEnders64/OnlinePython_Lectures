@@ -73,11 +73,11 @@
     ```
 - #####Lists
   - Like arrays in Javascript denoted by []
-    ```
-      teams = ['Mariners', 'Indians', 'Athletics']
-      teams[1] # accesses 'Indians'
-      teams[1] = 'Cardinals' # re-assigns bucket 1 to be 'Cardinals'
-    ```
+```python
+  teams = ['Mariners', 'Indians', 'Athletics']
+  teams[1] # accesses 'Indians'
+  teams[1] = 'Cardinals' # re-assigns bucket 1 to be 'Cardinals'
+```
   - Built-in Methods
     - len(), pop(), append()
     ```python
