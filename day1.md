@@ -72,7 +72,7 @@
   # "Hi my favorite color is: blue, no yellAAAAAHHH"
 ```
 - Lists
-  - Like arrays in Javascript denoted by []
+  - Like arrays in Javascript denoted by [ ]
 ```python
   teams = ['Mariners', 'Indians', 'Athletics']
   teams[1] # accesses 'Indians'
