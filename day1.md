@@ -86,3 +86,11 @@
   print len(teams) # 2
   teams.append('Pirates') # teams is now ['Mariners', 'Cardinals', 'Pirates']
 ```
+- Conditionals
+  - if, else, elif
+    - Example ```if 5 is not 1:```
+
+- Loops
+  - Fors, Whiles
+    - Example ```for num in range(0,5):```
+    - Example ```while 5 > 2:```
