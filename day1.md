@@ -32,15 +32,15 @@
 ####Let's Look At This Week's Checklist
 
 ####Let's Talk Python
-- #####Python Shell
-- #####Data Types
+- Python Shell
+- Data Types
   - <b>Booleans</b>:  True/False
   - <b>Numbers</b>: 2, 2.5
   - <b>Lists</b>: [10, 'You', xyz, 50]
   - <b>Dictionaries</b>:  {'city': 'Sheboygan'}
   - <b>Tuples</b>:  (False, {'user': 'Felix'})
   - <b>Strings</b>: "hello world"
-- #####Indentation & Line Endings & Comments
+- Indentation & Line Endings & Comments
   - Predict how many times the following loop will run.
 ```python
   '''
@@ -59,7 +59,7 @@
     </div> <!--end comment div -->
   </div> <!--end wrapper div -->
 ```
-- #####Strings
+- Strings
   - print function
 ```python
   michael = "Todd"
@@ -71,7 +71,7 @@
   print "Hi my favorite color is: {}, no  {}".format("blue", "yellAAAAAHHH")
   # "Hi my favorite color is: blue, no yellAAAAAHHH"
 ```
-- #####Lists
+- Lists
   - Like arrays in Javascript denoted by []
 ```python
   teams = ['Mariners', 'Indians', 'Athletics']
