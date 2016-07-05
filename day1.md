@@ -94,3 +94,5 @@
   - Fors, Whiles
     - Example ```for num in range(0,5):```
     - Example ```while 5 > 2:```
+
+####Demo Time: Odds And Evens
