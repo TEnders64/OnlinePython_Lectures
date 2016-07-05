@@ -42,35 +42,35 @@
   - <b>Strings</b>: "hello world"
 - #####Indentation & Line Endings & Comments
   - Predict how many times the following loop will run.
-    ```python
-      '''
-      How many times will this run?
-      '''
-      for num in range(1,5): # The colon is necessary for loops, functions, conditionals
-        print num
-        return
-    ```
+```python
+  '''
+  How many times will this run?
+  '''
+  for num in range(1,5): # The colon is necessary for loops, functions, conditionals
+    print num
+    return
+```
   - If it helps, treat indentation like you did HTML
-    ```html
-      <div class="wrapper">
-        <div class="comment">
-          <h1>Hello World</h1>
-          <p>How Are You?</p>
-        </div> <!--end comment div -->
-      </div> <!--end wrapper div -->
-    ```
+```html
+  <div class="wrapper">
+    <div class="comment">
+      <h1>Hello World</h1>
+      <p>How Are You?</p>
+    </div> <!--end comment div -->
+  </div> <!--end wrapper div -->
+```
 - #####Strings
   - print function
-    ```python
-      michael = "Todd"
-      print "Hi my name is: ", michael
-      # "Hi my name is: Todd"
-    ```
+```python
+  michael = "Todd"
+  print "Hi my name is: ", michael
+  # "Hi my name is: Todd"
+```
   - format function
-    ```python
-      print "Hi my favorite color is: {}, no  {}".format("blue", "yellAAAAAHHH")
-      # "Hi my favorite color is: blue, no yellAAAAAHHH"
-    ```
+```python
+  print "Hi my favorite color is: {}, no  {}".format("blue", "yellAAAAAHHH")
+  # "Hi my favorite color is: blue, no yellAAAAAHHH"
+```
 - #####Lists
   - Like arrays in Javascript denoted by []
 ```python
@@ -80,9 +80,9 @@
 ```
   - Built-in Methods
     - len(), pop(), append()
-    ```python
-      print len(teams) # 3
-      teams.pop() # Whatever's last, in this case, 'Athletics' gets removed!
-      print len(teams) # 2
-      teams.append('Pirates') # teams is now ['Mariners', 'Cardinals', 'Pirates']
-    ```
+```python
+  print len(teams) # 3
+  teams.pop() # Whatever's last, in this case, 'Athletics' gets removed!
+  print len(teams) # 2
+  teams.append('Pirates') # teams is now ['Mariners', 'Cardinals', 'Pirates']
+```
