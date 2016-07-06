@@ -1,4 +1,4 @@
-#Python Fundamentals Day 1
+#Python Fundamentals Lecture 1
 
 ####Administrative
 - Track access?
