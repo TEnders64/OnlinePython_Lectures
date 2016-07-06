@@ -11,6 +11,7 @@
 ####Key Assignment This Week
 - <b>Names</b>
 ![alt text](NamesAssignment.png "DICTIONARIES!!!")
+
 ####Functions, Dictionaries, Tuples
 - Functions
   - What are they good for?
