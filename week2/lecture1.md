@@ -13,7 +13,7 @@
   - We need to separate out our representation of data and the relationships between data into tables.
   - But it's not good enough to just separate.  We need to be concerned about repetition.
     - Structured data strives to follow the DRY principle as well.  The process is called Normalization.
-    - Let's build out an ERD in MySQL Workbench to help us visualize.
+    - Let's build out an ERD (blueprint of our database) in MySQL Workbench to help us visualize.
 
 ####ERD Lemo
 - Actors & Movies
@@ -23,7 +23,7 @@
 
 ![alt text](ActorsMoviesV1.png "ERD")
 
-  - There is a whole lot of repetition going on here. How do we solve this?
+  - There is a whole lot of repetition going on here and a list of films for an actor is not great. How do we solve this?
     - RELATIONSHIPS!
 
 ####Relationships
