@@ -23,7 +23,7 @@
 
 ####JOINS!
 - JOIN vs. LEFT JOIN vs. RIGHT JOIN vs. ...
-![alt text](Joins.png "JOINS Venn Diagram")
+![alt text](Joins.jpg "JOINS Venn Diagram")
 - Let's bulk up an earlier ```SELECT``` statement, because we want to know the languages that Americans speak.
   - ```SELECT * FROM countries JOIN languages ON countries.id = languages.country_id```
     - Cool! We just slammed the two tables together.  Granted, it's way too much info for us, but we can deal with that.
