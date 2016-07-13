@@ -34,3 +34,5 @@
 
 ####Lemo - MySQL Countries
 ![alt text](MySQLCountries.png "Countries ERD")
+- What query would you run to get all the countries that speak Slovene? Your query should return the name of the country, language and language percentage. Your query should arrange the result by language percentage in descending order.
+- What query would you run to get all the cities in Mexico with a population of greater than 500,000? Your query should arrange the result by population in descending order.
