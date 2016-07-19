@@ -8,6 +8,10 @@
 - Now where?
   - Let's build some stuff!
 
+####This Week's Key Assignments
+- Ninja Gold
+- Registration
+
 ####The Flask Mini-Framework
 - HTTP Request/Response Cycle
   - What's that look like again?
