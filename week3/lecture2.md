@@ -11,7 +11,11 @@
 
 ####What We Are Going To Cover Today
 - More Jinja2 templating
-  - Embedded Python and passing data into our 'views' (templates)
+- Session vs Cookie
+- Hidden Inputs
+
+####Jinja2 Is Our Engine, You Are The Driver
+- Embedded Python and passing data into our 'views' (templates)
 ```html
 <html>
   <body>
@@ -43,3 +47,12 @@
 def index():
   return render_template('index.html', username=request.form['username'])
 ```
+
+####Session vs Cookie vs Flash
+- Session is server-side, cookies are on your browser
+  - We can identify someone in Flask using the cookie file we store on their browser
+  - Session can be used to stash information temporarily until that user logs out or we set a timer
+  - Session storage is sparse!
+- Flash Data lives for only one request/response cycle as opposed to session!
+
+####Hidden Inputs
