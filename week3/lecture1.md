@@ -32,3 +32,5 @@
   - All we have to do is set up a templates folder in our project!
 
 #####Let's Get Flasking with a Lemo
+- Arrange for a GET request to render a template that has a form which POSTs to another route and then redirects
+- Next time we will introduce embedded python which includes passing data into the view and executing python logic
