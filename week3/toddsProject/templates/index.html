@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todd's Cool Project</title>
+</head>
+<body>
+  {% with errors = get_flashed_messages() %}
+    {% for error in errors %}
+      <p>{{error}}</p>
+    {% endfor %}
+  {% endwith %}
+  <form action="/users" method="post">
+    <input type="text" name="username" placeholder="username">
+    <input type="text" name="email" placeholder="email">
+    <input type="submit" value="Submit Your Username">
+  </form>
+</body>
+</html>
