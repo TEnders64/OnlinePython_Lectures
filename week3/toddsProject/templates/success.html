@@ -5,7 +5,21 @@
   <title>Success Page</title>
 </head>
 <body>
-  <h1>Hello {{session.username}}</h1>
-  <h2>Email: {{session.email}}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Email</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.email }}</td>
+          <td><a href="/users/{{user.username}}">{{ user.username }}</a></td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </body>
 </html>

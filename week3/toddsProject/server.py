@@ -30,6 +30,10 @@ def create():
 
 @app.route('/success')
 def success():
-    return render_template('success.html')
+    return render_template('success.html', users=[{'username':'tenders','email':'todd@todd.com'}, {'username':'marbogast', 'email':'michael@michael.com'}])
+
+@app.route('/users/<some_user>')
+def show(some_user):
+    return render_template('show.html', this_user=some_user)
 
 app.run(debug=True)
