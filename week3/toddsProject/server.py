@@ -24,8 +24,8 @@ def create():
     if errors:
         return redirect('/')
     else:
-        session['username'] = request.form['username']
-        session['email'] = request.form['email']
+        # session['username'] = request.form['username']
+        # session['email'] = request.form['email']
         return redirect('/success')
 
 @app.route('/success')

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Great Number Game</title>
+</head>
+<body>
+  <h1>Welcome to GnG</h1>
+  <p>I'm thinking of a number between 1 and 100. Take a guess!</p>
+  <h1>{{session.result}}</h1>
+  {% if session.correct %}
+    <a href="/reset"><button>Play Again!</button></a>
+  {% endif %}
+  <form action="/guess" method="post">
+    <input type="number" name="user_guess">
+    <input type="submit" value="Guess!">
+  </form>
+  <p>{{session.number}}</p>
+</body>
+</html>
