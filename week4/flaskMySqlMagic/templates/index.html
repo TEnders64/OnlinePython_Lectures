@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>World Stuff</title>
+</head>
+<body>
+  <h1>Top Ten Populations</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Population</th>
+        <th>Head Of State</th>
+        <th>Region</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for country in result %}
+        <tr>
+          <td>{{country.name}}</td>
+          <td>{{country.population}}</td>
+          <td>{{country.head_of_state}}</td>
+          <td>{{country.region}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
