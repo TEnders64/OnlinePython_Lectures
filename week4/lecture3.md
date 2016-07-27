@@ -24,4 +24,6 @@ bcrypt.check_password_hash(user[0]['hash_pass'], request.form['password'])
 + Username or Email exists, so now check the saved password against the form's password via `check_password_hash()`
 + If it is correct, save the user's id into session and redirect, otherwise redirect to the login
 
+####Let's Talk The Wall and How We Should Approach It
+
 ####Lemo - Continue Building the Countries App Using Semi-RESTful routes
