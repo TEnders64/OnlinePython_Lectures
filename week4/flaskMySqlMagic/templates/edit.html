@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{country.name}} Edit Page</title>
+</head>
+<body>
+  <form action="/countries/{{country.id}}" method="post">
+    <input type="text" name="name" value="{{country.name}}">
+    <input type="text" name="population" value="{{country.population}}">
+    <input type="text" name="region" value="{{country.region}}">
+    <input type="submit" value="Edit Country">
+  </form>
+</body>
+</html>

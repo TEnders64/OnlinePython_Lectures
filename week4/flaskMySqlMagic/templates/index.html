@@ -13,6 +13,7 @@
         <th>Population</th>
         <th>Head Of State</th>
         <th>Region</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -22,6 +23,7 @@
           <td>{{country.population}}</td>
           <td>{{country.head_of_state}}</td>
           <td>{{country.region}}</td>
+          <td><a href="/countries/{{country.id}}/edit">Edit</a></td>
         </tr>
       {% endfor %}
     </tbody>

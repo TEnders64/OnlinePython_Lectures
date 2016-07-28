@@ -37,4 +37,25 @@ def show(country_id):
     # [{'name':'Legoland', 'population':500000}]
     return render_template('show.html', country=result[0])
 
+@app.route('/countries/<country_id>/edit')
+def edit(country_id):
+    query = "SELECT * FROM countries WHERE id = :id"
+    data = {
+        'id': country_id
+    }
+    country = mysql.query_db(query, data) # [{}]
+    return render_template('edit.html', country=country[0])
+
+@app.route('/countries/<country_id>', methods=["POST"])
+def update(country_id):
+    query = "UPDATE countries SET name = :name, region = :region, population = :population WHERE id = :id"
+    data = {
+        'name': request.form['name'],
+        'region': request.form['region'],
+        'population': request.form['population'],
+        'id': country_id
+    }
+    mysql.query_db(query, data)
+    return redirect('/countries')
+
 app.run(debug=True)
