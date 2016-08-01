@@ -23,7 +23,7 @@
           <td>{{country.population}}</td>
           <td>{{country.head_of_state}}</td>
           <td>{{country.region}}</td>
-          <td><a href="/countries/{{country.id}}/edit">Edit</a></td>
+          <td><a href="/countries/{{country.id}}/edit">Edit</a><form action="/countries/{{country.id}}/delete" method="post"><input type="submit" value="Delete"></form></td>
         </tr>
       {% endfor %}
     </tbody>

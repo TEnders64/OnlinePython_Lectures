@@ -58,4 +58,13 @@ def update(country_id):
     mysql.query_db(query, data)
     return redirect('/countries')
 
+@app.route('/countries/<country_id>/delete', methods=["POST"])
+def destroy(country_id):
+    query = "DELETE FROM countries WHERE id = :country_id LIMIT 1"
+    data = {
+        'country_id': country_id
+    }
+    mysql.query_db(query, data)
+    return redirect('/countries')
+
 app.run(debug=True)
