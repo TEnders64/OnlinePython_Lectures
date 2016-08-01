@@ -1,4 +1,4 @@
-#Python - AJAX & APIs Week
+#Python - AJAX & APIs
 ####What Do We Know So Far?
 - We can set up Flask servers to handle...
   - Requests (form data), rendering templates (client views), redirects, Validations
@@ -61,7 +61,7 @@ for (var i = 0; i < data.results.length; i++){
 - Asynchronous Javascript and XML
 - Allows us to send an HTTP request (POST or GET) that will send or fetch data for us
 - We absolutely need jQuery for this!
-- For example (external)
+- An External API Example
 ```
 <script>
 $(document).ready(function(){
@@ -71,7 +71,7 @@ $(document).ready(function(){
 });
 </script>
 ```
-- Internal example (Flask)
+- Example of Hitting Our Own Flask Server
 ```
 <script>
 $(document).ready(function(){
