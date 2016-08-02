@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request, flash, session
+from flask import Flask, render_template, redirect, request, flash, session, jsonify
 from mysqlconnection import MySQLConnector
 app = Flask(__name__)
 app.secret_key = "ThisIsSecret"
@@ -8,12 +8,14 @@ mysql = MySQLConnector(app, 'world')
 
 @app.route('/')
 def reroute():
-    return redirect('/countries')
-
+    # return redirect('/countries')
+    return render_template('index.html')
 @app.route('/countries')
 def index():
     result = mysql.query_db("SELECT * FROM countries ORDER BY population DESC")
-    return render_template('index.html', result=result)
+    # return render_template('index.html', result=result)
+    print result
+    return jsonify(result)
 
 @app.route('/countries/new')
 def new():

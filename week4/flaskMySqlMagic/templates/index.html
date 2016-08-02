@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>World Stuff</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('button').click(function(){
+        $.get('/countries', function(countries){
+          console.log(countries);
+        }, 'json');
+      });
+    })
+  </script>
 </head>
 <body>
   <h1>All Countries</h1>
+  <button>Get Countries</button>
   <table>
     <thead>
       <tr>
