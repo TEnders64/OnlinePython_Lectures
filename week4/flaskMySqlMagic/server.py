@@ -14,7 +14,7 @@ def reroute():
 def index():
     result = mysql.query_db("SELECT * FROM countries ORDER BY population DESC")
     # return render_template('index.html', result=result)
-    print result
+    # print result
     return jsonify(result)
 
 @app.route('/countries/new')
@@ -60,13 +60,13 @@ def update(country_id):
     mysql.query_db(query, data)
     return redirect('/countries')
 
-@app.route('/countries/<country_id>/delete', methods=["POST"])
+@app.route('/countries/<country_id>/delete', methods=["GET", "POST"])
 def destroy(country_id):
     query = "DELETE FROM countries WHERE id = :country_id LIMIT 1"
     data = {
         'country_id': country_id
     }
     mysql.query_db(query, data)
-    return redirect('/countries')
+    return jsonify({'status': True})
 
 app.run(debug=True)

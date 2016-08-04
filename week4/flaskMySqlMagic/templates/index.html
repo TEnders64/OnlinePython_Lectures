@@ -8,9 +8,28 @@
     $(document).ready(function(){
       $('button').click(function(){
         $.get('/countries', function(countries){
-          console.log(countries);
+          for (var country_idx in countries){
+            var html_str = "<tr>";
+            html_str += "<td>"+countries[country_idx].name+"</td>";
+            html_str += "<td>"+countries[country_idx].population+"</td>";
+            html_str += "<td>"+countries[country_idx].head_of_state+"</td>";
+            html_str += "<td>"+countries[country_idx].region+"</td>"
+            html_str += "<td><a href='#' id='countries/"+countries[country_idx].id+"/delete'>Delete</a></td>"
+            html_str += "</tr>";
+            $('tbody').append(html_str);
+          }
         }, 'json');
       });
+
+      $('tbody').on('click', 'a', function(){
+        var that = $(this);
+        $.get($(this).attr('id'), function(response){
+          console.log(response);
+          if (response.status){
+            $(that).parent().parent().hide();
+          }
+        }, 'json')
+      })
     })
   </script>
 </head>
@@ -28,15 +47,7 @@
       </tr>
     </thead>
     <tbody>
-      {% for country in result %}
-        <tr>
-          <td><a href="/countries/{{country.id}}">{{country.name}}</a></td>
-          <td>{{country.population}}</td>
-          <td>{{country.head_of_state}}</td>
-          <td>{{country.region}}</td>
-          <td><a href="/countries/{{country.id}}/edit">Edit</a><form action="/countries/{{country.id}}/delete" method="post"><input type="submit" value="Delete"></form></td>
-        </tr>
-      {% endfor %}
+
     </tbody>
   </table>
   <a href="/countries/new"><button>New Country</button></a>
