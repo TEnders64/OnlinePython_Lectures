@@ -65,3 +65,4 @@ class Coder(Person):
 coder1 = Coder('Michael', 30, '60wpm')
 coder1.talk()
 ```
+- What else can we get out of this Coder?  Person attributes and methods?
