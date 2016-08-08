@@ -21,5 +21,6 @@ class Coder(Person):
   def code(self):
     print "I'm Coding Here!"
 
-coder1 = Coder('Michael', 30, '60wpm')
+coder1 = Coder('Todd', 32, '1000wpm')
 coder1.talk()
+print coder1.stamina
