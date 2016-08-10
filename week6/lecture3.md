@@ -2,8 +2,6 @@
 ####Key Assignments
 - Disappearing Ninjas and Ninja Gold
 
-# Python - Django!
-
 ####Recap
 
 #####Django is MTV
