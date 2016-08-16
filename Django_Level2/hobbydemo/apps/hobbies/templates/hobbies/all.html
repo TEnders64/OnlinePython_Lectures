@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Hobbies</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      {% for hobby in hobbies %}
+      <tr>
+        <td>{{hobby.name}}</td>
+        <td>{{hobby.description}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
