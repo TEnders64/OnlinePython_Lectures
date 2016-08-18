@@ -22,24 +22,25 @@ def all(request):
 
 def edit(request, hobby_id):
     h = Hobby.hobbyMgr.get(id=hobby_id)
+    print h.name
     context = {'hobby': h}
     return render(request, 'hobbies/edit.html', context)
+#grab specific column from the hobbies dictionary list
 
 def oneHobby(request, hobby_id):
     if request.method == "POST":
-        #do some UPDATE stuff
+        #do updated stuff to hobby and redirect
         h = Hobby.hobbyMgr.get(id=hobby_id)
         h.name = request.POST['name']
-        h.description = request.POST['description']
+        h.description = request.POST['description'] #validate in future
         h.save()
         return redirect('/all')
-
-    else: # it's a GET
-        #do some SHOW stuff
+    else:#it's a get
+        #do some show stuff render template
         h = Hobby.hobbyMgr.get(id=hobby_id)
         context = {'hobby': h}
         return render(request, 'hobbies/show.html', context)
 
 def delete(request, hobby_id):
-    Hobby.hobbyMgr.get(id=hobby_id).delete()
+    h = Hobby.hobbyMgr.get(id=hobby_id).delete()
     return redirect('/all')
