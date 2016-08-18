@@ -19,3 +19,27 @@ def all(request):
     hobbies = Hobby.hobbyMgr.all()
     context = {'hobbies': hobbies}
     return render(request, 'hobbies/all.html', context)
+
+def edit(request, hobby_id):
+    h = Hobby.hobbyMgr.get(id=hobby_id)
+    context = {'hobby': h}
+    return render(request, 'hobbies/edit.html', context)
+
+def oneHobby(request, hobby_id):
+    if request.method == "POST":
+        #do some UPDATE stuff
+        h = Hobby.hobbyMgr.get(id=hobby_id)
+        h.name = request.POST['name']
+        h.description = request.POST['description']
+        h.save()
+        return redirect('/all')
+
+    else: # it's a GET
+        #do some SHOW stuff
+        h = Hobby.hobbyMgr.get(id=hobby_id)
+        context = {'hobby': h}
+        return render(request, 'hobbies/show.html', context)
+
+def delete(request, hobby_id):
+    Hobby.hobbyMgr.get(id=hobby_id).delete()
+    return redirect('/all')

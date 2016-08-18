@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{hobby.name}} Edit Page</title>
+</head>
+<body>
+  <form action="/hobbies/{{hobby.id}}" method="post">
+    {% csrf_token %}
+    <input type="text" name="name" value="{{hobby.name}}">
+    <textarea name="description">{{hobby.description}}</textarea>
+    <input type="submit" value="Update">
+  </form>
+</body>
+</html>

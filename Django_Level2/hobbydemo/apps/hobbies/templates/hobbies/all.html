@@ -9,12 +9,14 @@
     <thead>
       <th>Name</th>
       <th>Description</th>
+      <th>Actions</th>
     </thead>
     <tbody>
       {% for hobby in hobbies %}
       <tr>
-        <td>{{hobby.name}}</td>
+        <td><a href="/hobbies/{{hobby.id}}">{{hobby.name}}</a></td>
         <td>{{hobby.description}}</td>
+        <td><a href="/hobbies/{{hobby.id}}/edit">Edit</a> | <a href="/hobbies/{{hobby.id}}/delete">Delete</a></td>
       </tr>
       {% endfor %}
     </tbody>
