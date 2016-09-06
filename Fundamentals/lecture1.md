@@ -25,7 +25,8 @@
     - **WEEK 5** Ajax Notes
     - **WEEK 6** Ninja Gold, Disappearing Ninjas (Django)
     - **WEEK 7** Semi-Restful Routes, Belt Reviewer
-    - **WEEK 8** Black Belt Week! No Code Reviews 
+    - **WEEK 8** Black Belt Week! No Code Reviews
+  - Push your assignments to GitHub repos and send the link to your repo to me on Slack in a DM.  I can code review and submit pull requests to you!
 - *Algorithms*
   - The Algorithms Slack Channel is where all things Algorithms will take place.  With the algorithm book in hand, you will self-pace but have a place to discuss them with other students and instructors/TAs.
 - *8 weeks of Python instruction*
