@@ -4,18 +4,27 @@
 - Track access?
 - Yellow Belts
 - Slack Communication
+  - Slack Team: *Coding Dojo Online*
 
 ####What You're Going To Get
-- Weekly Mentor Session ~ 20 mins
-  - If you don't have burning questions, still keep your meeting.
-- Weekly Code Review
-  - If you have a specific assignment you want reviewed, mention it to your mentor.
-- Daily Algorithms
-  - We'll be using a hosted GitHub repo to pull our challenges from.  We'll post solutions the morning after.
-- 8 weeks of Python instruction
-  - 2x Lectures and 2x Office Hours a week
-    - Prompt us for topics/demos to discuss in office hours
-  - M/W Lecture 4pm T/Th Office Hours 3pm
+- *Weekly Mentor Sessions Have a New Look ~ Moving to Slack*
+  - More Responsive Help from your classmates and thosewho are ahead, plus Instructor & TAs
+  - Could come in the form of a Text response, Hangout, or Screenhero
+  - There are 3 *MUSTS* we ask you provide before reaching out for help...
+    1. Put your code in a GitHub *repository*, *gist* or Slack *snippet*
+    2. Articulate what *you think* the problem is
+    3. List what you’ve already tried to solve the problem
+
+- *Code Reviews*
+  - Keep Submitting Your Code to the Learning Platform
+  - Key Assignments will be code reviewed
+- *Algorithms*
+  - The Algorithms Slack Channel is where all things Algorithms will take place.  With the algorithm book in hand, you will self-pace but have a place to discuss them with other students and instructors/TAs.
+- *8 weeks of Python instruction*
+  - 4 sessions a week
+    - Prompt us for topics/demos to discuss in more depth
+  - Tuesday/Thursday 4pm Pacific Wednesday/Friday 2pm Pacific
+  - We commence *October 28th*
 
 ####Expectations For You
 - 20 hours a week
@@ -25,9 +34,9 @@
 
 ####This Month's Outlook
 - Week 1: Python Fundamentals
-- Week 2: OOP
+- Week 2: Flask
 - Week 3: MySQL
-- Week 4: Flask
+- Week 4: Flask + MySQL
 
 ####Let's Look At This Week's Checklist
 
