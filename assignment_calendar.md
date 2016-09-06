@@ -54,10 +54,23 @@ Full Friends |
 Semi-RESTful Users |
 
 ## Week 5: AJAX, APIs, & OOP
-| Assignments to Push to Repository
+| Assignments to Push to Your Own Repository
 ---
 Build Your Own Pokedex|
 Weather Forecast App|
 Ajax Posts|
 **Ajax Notes - IMPORTANT** |
 **Animal - IMPORTANT** |
+
+## Week 6: Django Level I
+| Assignments to Push to Repository
+---
+
+## Week 7: Django Level II
+| Assignments to Push to Repository
+---
+
+## Week 8: Black Belt Week
+| Assignments to Push to Repository
+---
+Belt Reviewer |
