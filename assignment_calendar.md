@@ -65,10 +65,17 @@ Ajax Posts|
 ## Week 6: Django Level I
 | Assignments to Push to Repository
 ---
+Disappearing Ninjas |
+Ninja Gold |
 
 ## Week 7: Django Level II
 | Assignments to Push to Repository
 ---
+World Database ORM |
+Login and Registration |
+Multiple Apps |
+Semi-Restful Routes |
+Belt Reviewer |
 
 ## Week 8: Black Belt Week
 | Assignments to Push to Repository
