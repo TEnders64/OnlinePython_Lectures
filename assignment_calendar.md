@@ -1,6 +1,6 @@
 #Assignment Calendar
 
-## Week 1: Python Fundamentals (9/5/16)
+## Week 1: Python Fundamentals
 
 | Assignments to Push to Your Own Repository (For answersheets, please see the [Learning Platform] (http://www.learn.codingdojo.com))
 ---
@@ -17,7 +17,7 @@ Stars |
 Crawler |
 CSV |
 
-## Week 2: Flask Basics (9/12/16)
+## Week 2: Flask Basics
 | Assignments to Push to Your Own Repository (No need to push your virtual environment to the repo)
 ---
 Landing Page (Monday, Sept. 12)|
@@ -29,7 +29,7 @@ Dojo Survey w/ Validation |
 Registration Form |
 Disappearing Ninja |
 
-## Week 3: MySQL (9/19/16)
+## Week 3: MySQL
 | Assignments to Push to Your Own Repository (no need to include the DB)
 ---
 Books |
@@ -41,7 +41,7 @@ Normalization |
 Friendships |
 SQLZoo |
 
-## Week 4: Flask + MySQL (9/26/16)
+## Week 4: Flask + MySQL
 
 > This is an extremely important week. The assignments integrate everything we've learned so far to build our **first** full-stack application. That means it's essential you work through each of them.
 
@@ -53,7 +53,7 @@ Full Friends |
 **The Wall - ESSENTIAL - MUST BE COMPLETED BY 9/2/16** |
 Semi-RESTful Users |
 
-## Week 5: AJAX, APIs, & OOP (10/3/16)
+## Week 5: AJAX, APIs, & OOP
 | Assignments to Push to Repository
 ---
 Build Your Own Pokedex|
