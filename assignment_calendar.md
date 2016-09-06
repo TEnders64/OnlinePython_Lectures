@@ -20,7 +20,7 @@ CSV |
 ## Week 2: Flask Basics
 | Assignments to Push to Your Own Repository (No need to push your virtual environment to the repo)
 ---
-Landing Page (Monday, Sept. 12)|
+Landing Page |
 Dojo Survey |
 Counter |
 Great Number Game |
