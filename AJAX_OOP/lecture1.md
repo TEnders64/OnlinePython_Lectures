@@ -1,4 +1,30 @@
 #Python - AJAX & APIs
+####New Changes
+- **Weekly Mentor Sessions Have a New Look ~ Moving to Slack**
+  - More Responsive Help from your classmates and thosewho are ahead, plus Instructor & TAs
+  - Could come in the form of a Text response, Hangout, or Screenhero
+  - There are 3 **MUSTS** we ask you provide before reaching out for help...
+    1. Put your code in a GitHub **repository**, **gist** or Slack **snippet**
+    2. Articulate what **you think** the problem is
+    3. List what you’ve already tried to solve the problem
+
+- **Code Reviews**
+  - Keep Submitting Your Code to the Learning Platform
+  - Key Assignments will be code reviewed
+    - **WEEK 4** The Wall
+    - **WEEK 5** Ajax Notes
+    - **WEEK 6** Ninja Gold, Disappearing Ninjas (Django)
+    - **WEEK 7** Semi-Restful Routes, Belt Reviewer
+    - **WEEK 8** Black Belt Week! No Code Reviews
+  - Push your assignments to GitHub repos and send the link to your repo to me on Slack in a DM.  I can code review and submit pull requests to you!
+- **Algorithms**
+  - The Algorithms Slack Channel is where all things Algorithms will take place.  With the algorithm book in hand, you will self-pace but have a place to discuss them with other students and instructors/TAs.
+- **4 more weeks of Python instruction**
+  - 4 sessions a week
+    - Prompt us for topics/demos to discuss in more depth
+  - **Monday/Tuesday/Wednesday/Thursday 3pm Pacific**
+  - We commence **September 30th**
+
 ####What Do We Know So Far?
 - We can set up Flask servers to handle...
   - Requests (form data), rendering templates (client views), redirects, Validations
