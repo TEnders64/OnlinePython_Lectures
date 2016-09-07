@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenWeather Demo</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script>
+    //6e66c5cd70846fd210b493c10d876730
+    $(document).ready(function(){
+
+      $.get('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=6e66c5cd70846fd210b493c10d876730', function(data){
+        console.log(data);
+      }, 'json');
+
+    })
+  </script>
+</head>
+<body>
+  <div>
+    <h1>Temperature: 65<h1>
+  </div>
+</body>
+</html>
