@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>World Countries</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('#get_countries').click(function(){
+        $.get('/countries', function(countries){
+          console.log(countries);
+        }, 'json');
+      });
+
+    })
+  </script>
 </head>
 <body>
   <h1>World DB with AJAX</h1>
-  <button>Click To Populate Countries Table</button>
+  <button id="get_countries">Click To Populate Countries Table</button>
   <table>
     <thead>
       <th>Country</th>
@@ -19,7 +31,7 @@
         <td>China</td>
         <td>1357000000</td>
         <td>Xi Jinping</td>
-        <td><button>Remove</button><button>Edit</button></td>
+        <td><button class="remove_country">Remove</button><button class="edit_country">Edit</button></td>
       </tr>
     </tbody>
   </table>
