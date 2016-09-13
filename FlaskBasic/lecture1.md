@@ -9,6 +9,7 @@
 ####This Week's Key Assignments
 - Ninja Gold
 - Registration
+- Disappearing Ninjas
 
 ####The Flask Mini-Framework
 - HTTP Request/Response Cycle
