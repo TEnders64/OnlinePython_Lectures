@@ -10,6 +10,30 @@
       $('#get_countries').click(function(){
         $.get('/countries', function(countries){
           console.log(countries);
+          $('tbody').html("");
+          for (var i = 0; i < countries.length; i++){
+            var html_str = "<tr class='"+countries[i].id+"'>";
+            html_str += "<td>"+countries[i].name+"</td>";
+            html_str += "<td>"+countries[i].population+"</td>";
+            html_str += "<td>"+countries[i].head_of_state+"</td>";
+            html_str += "<td><button class='remove'>Remove</button></td>";
+            html_str += "</tr>";
+            $('tbody').append(html_str);
+            console.log(countries[i]);
+          }
+          // var html_str =
+        }, 'json');
+      });
+
+      $('tbody').on('click', 'button.remove', function(){
+        var country_row = $(this).closest('tr');
+        var country_id = $(this).closest('tr').attr('class');
+        $.get('/countries/'+country_id+'/destroy', function(response){
+          if (response.status){
+            country_row.remove();
+          }else{
+            alert('Country not deleted properly!');
+          }
         }, 'json');
       });
 

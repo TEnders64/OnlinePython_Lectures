@@ -3,8 +3,6 @@
 ####Where Are We?
 - We've learned Python
   - Those fundamentals are going to come in handy!
-- We've learned MySQL
-  - SQL queries are tough, but they're necessary to CRUD our database.
 - Now where?
   - Let's build some stuff!
 
@@ -16,7 +14,7 @@
 - HTTP Request/Response Cycle
   - What's that look like again?
 - Where does Flask come in?
-  - Flask is going to be able to cover us from front to back and even handle DB communication
+  - Flask is going to be able to cover us from front to back and even handle DB communication (in a couple weeks)
     - We can catch incoming HTTP requests!
     - We can handle <form> data & validate it!
     - We can then do some logic and render pages (templates) with embedded Python in there!
@@ -37,4 +35,4 @@
 
 #####Let's Get Flasking with a Lemo
 - Arrange for a GET request to render a template that has a form which POSTs to another route and then redirects
-- Next time we will introduce embedded python which includes passing data into the view and executing python logic
+- Introduce embedded python which includes passing data into the view and executing python logic

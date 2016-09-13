@@ -24,3 +24,4 @@ class Coder(Person):
 coder1 = Coder('Todd', 32, '1000wpm')
 coder1.talk()
 print coder1.stamina
+print coder1, person1, object

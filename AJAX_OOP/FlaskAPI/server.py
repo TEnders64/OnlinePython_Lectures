@@ -10,8 +10,19 @@ def index():
 
 @app.route('/countries')
 def countries():
-    countries = mysql.query("SELECT * FROM countries")
+    countries = mysql.query_db("SELECT * FROM countries")
     print countries
     return jsonify(countries)
-    
+
+@app.route('/countries/<id>/destroy')
+def destroy(id):
+    query = "DELETE FROM countries WHERE id = :id"
+    data = {'id': id}
+    mysql.query_db(query, data)
+    country = mysql.query_db("SELECT * FROM countries WHERE id = "+id)
+    if country:
+        return jsonify({'status': False})
+    else:
+        return jsonify({'status': True})
+
 app.run(debug=True)
