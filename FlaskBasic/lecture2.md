@@ -60,3 +60,12 @@ def form_results():
   - When would this be useful?  
     1. What if there are multiple forms on a page?  Which one got submitted?
     2. Identifying who's logged in and trying to create comments (think: Facebook)
+
+```html
+<form action="/new_comment" method="post">
+  <input type="hidden" name="current_user" value="{{session['user_id']}}">
+  <input type="hidden" name="current_message" value="{{session['message_id']}}">
+  <textarea name="comment"></textarea>
+  <input type="submit" value="Add Comment">
+</form>
+```
