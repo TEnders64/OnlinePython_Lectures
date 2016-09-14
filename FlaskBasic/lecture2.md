@@ -43,9 +43,9 @@
     - Back inside our server.py file...
 ```python
 #...
-@app.route('/')
-def index():
-  return render_template('index.html', username=request.form['username'])
+@app.route('/form_results')
+def form_results():
+  return render_template('results.html', username=request.form['username'])
 ```
 
 ####Session vs Cookie vs Flash
