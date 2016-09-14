@@ -56,3 +56,7 @@ def form_results():
 - Flash Data lives for only one request/response cycle as opposed to session!
 
 ####Hidden Inputs
+- Hidden inputs allow us to pack more information into a form without the user knowing it
+  - When would this be useful?  
+    1. What if there are multiple forms on a page?  Which one got submitted?
+    2. Identifying who's logged in and trying to create comments (think: Facebook)
