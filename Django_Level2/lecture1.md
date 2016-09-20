@@ -48,7 +48,7 @@ class User (models.Model):
       password = models.CharField(max_length=100)
       created_at = models.DateTimeField(auto_now_add = True)
       updated_at = models.DateTimeField(auto_now = True)
-      userMgr = UserManager()
+      objects = UserManager()
 ```
 - We've updated the User model to create an instance of UserManager.
-- The UserManager class houses our heavier logic and will be our new ORM that replaces `objects`
+- The UserManager class houses our heavier logic and will be our new ORM that replaces the older version of `objects`
