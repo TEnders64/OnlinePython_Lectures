@@ -13,7 +13,7 @@
 ####Field Types
 - IntegerField, CharField, DateField, ForeignKey, etc.
 - Very similar to MySQL's `INT`, `VARCHAR()`, `DATETIME`, etc.
-- Note: We don't have to state <b>id, created_at, or updated_at</b> fields anymore!
+- Note: We don't have to state the <b>id</b> field anymore
 ```
 class User(models.Model):
       first_name = models.CharField(max_length=45)
