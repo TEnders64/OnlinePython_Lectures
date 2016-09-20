@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Word</title>
+</head>
+<body>
+  <h1>Random Word</h1>
+  <p>{{word}}</p>
+  <p>Visited {{request.session.counter}} times</p>
+  <a href="{% url 'word_index' %}"><button>Generate</button></a>
+</body>
+</html>

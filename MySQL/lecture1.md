@@ -1,8 +1,8 @@
 #Python - MySQL Week
 
 ####Administrative
-- Checklist is up to date for Weeks 1 - 5.5
-- Fundamentals(1), MySQL(2), Flask(3), Flask+MySQL(4), OOP(5)
+- Reminder for Slack: Push code to GitHub when needing help.
+- Getting To Know You: DM me on Slack with your availability.
 
 ####Key Assignment: Sakila (Suh-KEE-luh)
 

@@ -6,8 +6,16 @@
 </head>
 <body>
   <h1>Create a User</h1>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p>{{message}}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
   <form action="/users" method="post">
     <input type="text" name="first_name">
+    <input type="text" name="last_name">
     <input type="submit" value="Create User">
   </form>
 </body>
