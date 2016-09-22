@@ -17,7 +17,7 @@ class HobbyManager(models.Manager):
         if len(errors) > 0:
             return (False, errors)
         else:
-            h = Hobby.hobbyMgr.create(name=kwargs['name'], description=kwargs['description'])
+            h = Hobby.objects.create(name=kwargs['name'], description=kwargs['description'])
             return (True, h)
 
 class Hobby(models.Model):
@@ -25,4 +25,4 @@ class Hobby(models.Model):
     description = models.CharField(max_length=128)
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateField(auto_now=True)
-    hobbyMgr = HobbyManager()
+    objects = HobbyManager()
