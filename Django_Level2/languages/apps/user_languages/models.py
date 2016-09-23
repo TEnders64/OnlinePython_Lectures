@@ -1,15 +1,27 @@
 from __future__ import unicode_literals
-
 from django.db import models
 
 class UserManager(models.Manager):
     def register(self, **kwargs):
         errors = False
-        if not errors:
-            User.objects.create(first_name=kwargs['first_name'], last_name=kwargs['last_name'], email=kwargs['email'], password=kwargs['password'])
-        return True
+        error_list = []
+        if len(kwargs['first_name']) is 0:
+            error_list.append("First name is required")
+            errors = True
+        if not kwargs['first_name'].isalpha():
+            error_list.append("First name can only contain letters")
+            errors = True
+        if not kwargs['last_name'].isalpha():
+            error_list.append("Last name is required and must contain only letters")
 
-# Create your models here.
+        if not errors:
+            user = User.objects.create(first_name=kwargs['first_name'], last_name=kwargs['last_name'], email=kwargs['email'], password=kwargs['password'])
+            print user.id
+            return (True, user.id)
+        else:
+            return (False, error_list)
+
+
 class User(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
@@ -22,6 +34,5 @@ class User(models.Model):
 class Language(models.Model):
     language = models.CharField(max_length=255)
     users = models.ManyToManyField(User)
-    # language.objects.get(id=1).users()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

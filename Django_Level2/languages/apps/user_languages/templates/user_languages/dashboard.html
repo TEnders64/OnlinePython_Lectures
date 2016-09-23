@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>User Dashboard</h1>
+  {% for user in all_users %}
+  <p>{{user.first_name}}</p>
+  {% endfor %}
+</body>
+</html>
