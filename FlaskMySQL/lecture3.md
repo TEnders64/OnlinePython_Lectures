@@ -26,4 +26,4 @@ bcrypt.check_password_hash(user[0]['hash_pass'], request.form['password'])
 
 ####Let's Talk The Wall and How We Should Approach It
 
-####Lemo - Continue Building the Countries App Using Semi-RESTful routes
+####Lemo - Continue Building the Users App Using Semi-RESTful routes

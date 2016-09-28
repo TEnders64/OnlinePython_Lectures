@@ -1,5 +1,5 @@
 #Python - Flask + MySQL Week ( THE WALL WEEK )
-####Lemo - Continue Building the Countries App Using Semi-RESTful routes
+####Lemo - Continue Building the Users App Using Semi-RESTful routes
 ####RESTful routing
 - A convention for naming your routes so that we can understand them just by reading them
 - E.G.
