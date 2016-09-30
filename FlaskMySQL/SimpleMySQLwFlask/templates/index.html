@@ -11,7 +11,7 @@
 	<hr>
 
 	<h2>Hello Everyone~</h2>
-	
+
 	<h3>Users</h3>
 	<table border=1>
 		<thead>
@@ -23,17 +23,12 @@
 		<tbody>
 			{% for user in all_users: %}
 			<tr>
-				<td>{{user.first_name}}</td>
+				<td><a href="/users/{{user.id}}">{{user.first_name}}</a></td>
 				<td>{{user.last_name}}</td>
 			</tr>
 			{% endfor %}
 		</tbody>
 	</table>
-
-	<form action="/create" method="post">
-		<p>First Name: <input type="text" name="first_name"></p>
-		<p>Last Name: <input type="text" name="last_name"></p>
-		<input type="submit" value="Add new User">
-	</form>
+	<a href="/users/new"><button>Create User</button></a>
 </body>
 </html>
