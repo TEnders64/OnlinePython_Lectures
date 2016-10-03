@@ -7,36 +7,36 @@
   - Slack Team: **Coding Dojo Online**
 
 ####What You're Going To Get
-- **Weekly Mentor Sessions Have a New Look ~ Moving to Slack**
-  - More Responsive Help from your classmates and thosewho are ahead, plus Instructor & TAs
-  - Could come in the form of a Text response, Hangout, or Screenhero
-  - There are 3 **MUSTS** we ask you provide before reaching out for help...
-    1. Put your code in a GitHub **repository**, **gist** or Slack **snippet**
-    2. Articulate what **you think** the problem is
-    3. List what you’ve already tried to solve the problem
+- More Responsive Help from your classmates and those who are ahead, plus Instructors & TAs
+- Could come in the form of a Text response, Hangout, Screenhero or Zoom
+- There are 3 **MUSTS** we ask you provide before reaching out for help...
+ 1. Put your code in a GitHub **repository**, **gist** or Slack **snippet**
+ 2. Articulate what **you think** the problem is
+ 3. List what you’ve already tried to solve the problem
 
 - **Code Reviews**
-  - Keep Submitting Your Code to the Learning Platform
+  - This month & following, will occur through GitHub
   - Key Assignments will be code reviewed
     - **WEEK 1** Scores & Grades, Names
-    - **WEEK 2** Ninja Gold, Disappearing Ninjas (Flask)
+    - **WEEK 2** Ninja Gold, Registration Form (Flask)
     - **WEEK 3** Sakila
     - **WEEK 4** The Wall
     - **WEEK 5** Ajax Notes
     - **WEEK 6** Ninja Gold, Disappearing Ninjas (Django)
-    - **WEEK 7** Semi-Restful Routes, Belt Reviewer
+    - **WEEK 7** Belt Reviewer
     - **WEEK 8** Black Belt Week! No Code Reviews
   - Push your assignments to GitHub repos and send the link to your repo to me on Slack in a DM.  I can code review and submit pull requests to you!
+
 - **Algorithms**
   - The Algorithms Slack Channel is where all things Algorithms will take place.  With the algorithm book in hand, you will self-pace but have a place to discuss them with other students and instructors/TAs.
 - **8 weeks of Python instruction**
   - 4 sessions a week
     - Prompt us for topics/demos to discuss in more depth
-  - Tuesday/Thursday 4pm Pacific Wednesday/Friday 2pm Pacific
-  - We commence **October 28th**
+  - Same schedule as last month, M/W 4pm T/Th 5 pm Pacific
+  - We commence **October 3rd (today)**
 
 ####Expectations For You
-- 20 hours a week
+- 20 - 25 hours a week
 - Read materials before class
 - Don't wait until it's too late!
 - On-site Pace vs Online Pace
@@ -55,7 +55,7 @@
   - <b>Booleans</b>:  True/False
   - <b>Numbers</b>: 2, 2.5
   - <b>Lists</b>: [10, 'You', xyz, 50]
-  - <b>Dictionaries</b>:  {'city': 'Sheboygan'}
+  - <b>Dictionaries</b>:  {'city': 'Minneapolis'}
   - <b>Tuples</b>:  (False, {'user': 'Felix'})
   - <b>Strings</b>: "hello world"
 - Indentation & Line Endings & Comments
@@ -80,9 +80,9 @@
 - Strings
   - print function
 ```python
-  michael = "Todd"
+  michael = "Sara"
   print "Hi my name is: ", michael
-  # "Hi my name is: Todd"
+  # "Hi my name is: Sara"
 ```
   - format function
 ```python
