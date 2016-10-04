@@ -1,16 +1,15 @@
-students = [
-     {'first_name':  'Michael', 'last_name' : 'Jordan'},
-     {'first_name' : 'John', 'last_name' : 'Rosales'},
-     {'first_name' : 'Mark', 'last_name' : 'Guillen'},
-     {'first_name' : 'KB', 'last_name' : 'Tonel'}
-]
-#
-# for idx in range(0, len(students)):
-#     full_name = students[idx]['first_name'] + ' ' + students[idx]['last_name']
-#     print full_name
-#
-# for student in students:
-#     print student['first_name'] + ' ' + student['last_name']
+#sum List
+
+a = [1,2,5,10,255,3]
+def sum_list(list):
+	summation = 0
+	for i in range(0, len(list)):
+		# print list[i]
+		summation += list[i]
+	print summation
+sum_list(a)
+
+
 
 users = {
  'Students': [

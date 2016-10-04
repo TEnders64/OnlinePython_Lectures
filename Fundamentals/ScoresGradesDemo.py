@@ -1,6 +1,8 @@
+from random import randint
+
 print "Scores and Grades"
 for i in range(0,10):
-    user_input = raw_input("Enter A Score: ")
+    user_input = randint(50,100)
     if user_input < 60:
         print "Score: ",user_input,"; Your grade is an F"
     elif user_input <= 69:

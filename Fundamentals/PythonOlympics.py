@@ -9,7 +9,7 @@
 # ]
 # print my_list[1] + my_second_list[2]
 
-
+#
 # my_list = [41, 23]
 # my_second_list = [
 #   42,
@@ -33,7 +33,7 @@
 # num1, num2, num3 = 1,3,5
 # print (num2)
 
-
+#
 # i,j = 1,2,3
 # print j
 # (i,j) = (1,2,3)
@@ -41,18 +41,18 @@
 
 
 # our_list = ['Martin', 'Michael']
-# for val in enumerate(our_list):
-#   print val
+# # for val in enumerate(our_list):
+# #   print val
 #
 # for idx,value in enumerate(our_list):
 #   print value, idx
 
+#
+# name = {"sw":"Sara Wong", "mp":"Martin Puryear"}
+# for key, value in name:
+#   print key, value
 
-name = {"sw":"Sara Wong", "mp":"Martin Puryear"}
-for key, value in name:
-  print key, value
-
-
+# 
 # name = {"sw":"Sara Wong", "mp":"Martin Puryear"}
 # for key value in name.items():
 #   print key, value
