@@ -19,21 +19,21 @@ y = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]
 #     else:
 #         print y[idx] * "*"
 
-def drawStarsAndChars(someList):
-    for idx in range(0, len(someList)):
-        if isinstance(someList[idx], str):
-            char = someList[idx][0].lower()
-            charStr = ""
-            for charIdx in range(0, len(someList[idx])):
-                charStr += char
-            print charStr
-        else:
-            starStr = ""
-            for starIdx in range(0, someList[idx]):
-                starStr += "*"
-            print starStr
-
-drawStarsAndChars(y)
+# def drawStarsAndChars(someList):
+#     for idx in range(0, len(someList)):
+#         if isinstance(someList[idx], str):
+#             char = someList[idx][0].lower()
+#             charStr = ""
+#             for charIdx in range(0, len(someList[idx])):
+#                 charStr += char
+#             print charStr
+#         else:
+#             starStr = ""
+#             for starIdx in range(0, someList[idx]):
+#                 starStr += "*"
+#             print starStr
+# 
+# drawStarsAndChars(y)
 
 
 

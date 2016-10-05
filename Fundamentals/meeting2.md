@@ -1,6 +1,11 @@
-#Python Fundamentals Office Hours
+#Python Fundamentals Meeting 2
 
 ####Q&A
 
 ####Demo
-- Draw Stars
+- loop a list
+ - print all values
+ - swap first and last
+ - reverse
+
+- Python Olympics
