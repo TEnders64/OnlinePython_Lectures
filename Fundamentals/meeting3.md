@@ -1,4 +1,4 @@
-#Python Fundamentals Lecture 2
+#Python Fundamentals Lecture 3
 
 ####Key Assignment This Week
 - <b>Names</b>
