@@ -1,6 +1,10 @@
 #Python - Flask Week
 
 ####Where Are We?
+- What assignments are you working on?
+
+- Upload your weekly key assignment! Tomorrow is Code Review Day! (Names)
+
 - We've learned Python
   - Those fundamentals are going to come in handy!
 - Now where?
