@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $.ajax({
+      method: 'get',
+      url: '/notes',
+      dataType: 'html',
+      success: function(res){
+        $('#notes').html(res);
+      }
+    })
+
+    $('body').on('submit','form', function(){
+
+      $(this).find('input[type="text"]').val("");
+
+      $.ajax({
+        method: 'post',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        dataType: 'html',
+        success: function(res){
+          $('#notes').html(res);
+        }
+      });
+
+      return false;
+    })
+
+    $('#notes').on('change', 'textarea', function(){
+      $.ajax({
+        method: 'post',
+        url: '/notes/'+$(this).attr('data-id')+'/update',
+        data: {'description': $(this).val()},
+        dataType: 'json',
+        success: function(res){
+          if (res.status){
+            console.log('yay saved!');
+          }else{
+            console.log('boooo');
+          }
+        }
+      })
+    })
+  })
+  </script>
+</head>
+<body>
+  <h1>Notes</h1>
+  <hr>
+  <div id="notes">  </div>
+  <form action="/notes/create" method="post">
+    <input type="text" name="title">
+    <input type="submit" value="Add Note">
+  </form>
+</body>
+</html>

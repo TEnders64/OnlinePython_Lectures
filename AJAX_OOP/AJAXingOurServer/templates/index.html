@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      $('button').click(function(){
+        $.ajax({
+          method:'get',
+          url: '/countries',
+          success: function(countries){
+            $("tbody").append(countries);
+          },
+          dataType: 'html'
+        })
+      })
+
+    });
+  </script>
+</head>
+<body>
+  <h1>World AJAX</h1>
+  <button>Get Countries</button>
+  <table id="countries">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Head of State</th>
+        <th>Population</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</body>
+</html>

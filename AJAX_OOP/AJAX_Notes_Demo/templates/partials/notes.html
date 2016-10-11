@@ -1,0 +1,9 @@
+{% for note in notes %}
+<div>
+  <h5>{{note.title}}</h5>
+  <textarea data-id="{{note.id}}">{{note.description}}</textarea>
+  <form action="/notes/{{note.id}}/destroy" method="post">
+    <input type="submit" value="Delete">
+  </form>
+</div>
+{% endfor %}

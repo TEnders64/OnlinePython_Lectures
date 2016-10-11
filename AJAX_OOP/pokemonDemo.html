@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function(){
+      // $.get('http://pokeapi.co/api/v2/pokemon/1', function(bulbasaur){
+      //   console.log(bulbasaur);
+      // }, 'json');
+
+      $('form').submit(function(){
+        // console.log($(this).serialize());
+        var pokeId = $('input[name="pokemon_id"]').val();
+        console.log(pokeId);
+        $.get('http://pokeapi.co/api/v2/pokemon/'+pokeId, function(pokemon){
+          console.log(pokemon);
+          var html_str = "";
+          html_str += "<h1>Pokemon Name: "+pokemon.name+"</h1>";
+          console.log(html_str);
+          $('body').append(html_str);
+        }, 'json');
+        return false;
+      })
+
+      $('form').submit(function(){
+        $.post('/posts/create', $(this).serialize(), function(partial){
+          console.log(partial); // <div><h1>Get Groceries</h1></div>
+          $('#notesList').append(partial);
+        }, 'html')
+
+        return false;
+      })
+
+      $.ajax({
+        method: 'get',
+        url: 'http://pokeapi.co/api/v2/pokemon/1',
+        success: function(bulbasaur){
+          console.log(bulbasaur);
+        },
+        dataType: 'json'
+      });
+    })
+  </script>
+</head>
+<body>
+  <form action="/pokemon" method="post">
+    <input type="number" name="pokemon_id"/>
+    <input type="submit" value="Get Pokemon">
+  </form>
+</body>
+</html>

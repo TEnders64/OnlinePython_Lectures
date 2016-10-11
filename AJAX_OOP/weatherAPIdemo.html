@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script src="appkey.js"></script>
+  <script>
+    $(document).ready(function(){
+      $.ajax({
+        method: 'get',
+        url: 'http://api.openweathermap.org/data/2.5/weather?q=London&units=imperial&APPID='+appkey,
+        dataType: 'json',
+        success: function(weather){
+          console.log(weather.main.temp);
+        }
+      })
+
+    });
+  </script>
+  </script>
+</head>
+<body>
+
+</body>
+</html>
