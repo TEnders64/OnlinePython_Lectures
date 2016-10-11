@@ -3,8 +3,6 @@
 ####What Did We Learn Yesterday?
 - Virtual Environments (Briefly)
   - Sandboxes where we can pile up every tool we need for the job.  We can reuse these in multiple projects!
-- Request/Response cycle
-![alt text](FlaskReqResCycle.png "Request/Response Cycle")
 - Where Flask lives (server-side)
 - What Flask can provide so far...
   - Handling different requests to different routes via different methods: GET & POST
@@ -14,6 +12,8 @@
 - More Jinja2 templating
 - Session vs Cookie
 - Hidden Inputs
+- Request/Response cycle
+![alt text](FlaskReqResCycle.png "Request/Response Cycle")
 
 ####Jinja2 Is Our Engine, You Are The Driver
 - Embedded Python and passing data into our 'views' (templates)
