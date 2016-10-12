@@ -3,11 +3,11 @@ app = Flask(__name__)
 
 app.secret_key = "i am a secret key!!!! super secret"
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
 	if 'name' not in session:
 		session['name'] = ""
-	return render_template('index.html')
+	return render_template('index.html', name="hi")
 
 @app.route('/process', methods=['POST'])
 def process():

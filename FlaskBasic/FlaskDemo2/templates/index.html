@@ -2,17 +2,39 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet"> -->
 		<title></title>
 	</head>
 	<body>
 		<h1>This is the page.</h1>
+	 	<h1>{{name['first']}} <span class="white">{{name['second']}}</span></h1>
+		<ul>
+
 		{% for num in range(8) %}
-		<h2> {{ num }} {{ session['name'] }} </h2>
+			{% if num / 2 > 1 %}
+			<li>
+				<h2> The quick brown {{ num }} jumped over the {{ session['name'] }} </h2>
+			</li>
+			{% else %}
+			<h2>whattt</h2>
+			{% endif %}
 		{% endfor %}
+		</ul>
 		<form action="/process" method="post">
-			<input type="text" name="first_name" value="">
+			<input type="text" name="first_name" value="{{ name }}">
+			<input type="hidden" name="my-hidden-input" value="{{ num }}">
+			<select class="" name="group">
+				<option>option1</option>
+				<option>option2</option>
+				<option>option3</option>
+				<option>option4</option>
+			</select>
 			<input type="submit" name="submit" value="Click me!">
+		</form>
+		<form class="" action="/" method="post">
+			<input type="button" name="name" value="wow i'm a button">
+			<input type="hidden" name="my-hidden-input" value="form2">
+			<input type="submit" name="name" value="click me also!">
 		</form>
 	</body>
 </html>
