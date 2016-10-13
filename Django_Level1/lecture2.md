@@ -9,6 +9,7 @@
 
 ####Quiz
 - A GET request to '/users' is fired...what's next?
+
 ![alt text](DjangoApp.png "Request/Response Cycle")
 
 ####Session
