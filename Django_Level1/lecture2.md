@@ -7,6 +7,10 @@
 - Templates handle client-facing HTML/CSS/JS `templates/appname/index.html`
 - Views `views.py` handle the requests coming from the routing file `urls.py`
 
+####Quiz
+- A GET request to '/users' is fired...what's next?
+![alt text](DjangoApp.png "Request/Response Cycle")
+
 ####Session
 - Session still does the same thing it always does regardless of what stack we're in.  
   - Hangs onto small amounts of data that we want to preserve for a current user, etc.
