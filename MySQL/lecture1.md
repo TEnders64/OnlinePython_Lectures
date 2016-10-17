@@ -2,7 +2,6 @@
 
 ####Administrative
 - Reminder for Slack: Push code to GitHub when needing help.
-- Getting To Know You: DM me on Slack with your availability.
 
 ####Key Assignment: Sakila (Suh-KEE-luh)
 
