@@ -30,8 +30,8 @@
 							<option value="Mixed Breed">Mixed Breed</option>
 						</select>
 						<label for="first_name">My name is:</label>
-						<input type="text" name="first_name" >
-						<input type="text" name="last_name" >
+						<input type="text" name="first_name" value="">
+						<input type="text" name="last_name" value="">
 						<label for="email">My email address is:</label>
 						<input type="email" name="email" value="">
 						<div class="row">
@@ -43,20 +43,20 @@
 					<img class="puppy-pic" src="static/img/puppy-love.jpg" alt="" />
 				</div>
 			</div><!-- row -->
-			<div class="flashed-messages">
-				{% with messages = get_flashed_messages() %}
-				  {% if messages %}
-				    <ul class=flashes>
-				    {% for message in messages %}
-				      <li>{{ message }}</li>
-				    {% endfor %}
-				    </ul>
-				  {% endif %}
-				{% endwith %}
-			</div>
-			<div class="adopters">
+			{% with messages = get_flashed_messages() %}
+			  {% if messages %}
+			    <ul class=flashes>
+			    {% for message in messages %}
+			      <li>{{ message }}</li>
+			    {% endfor %}
+			    </ul>
+			  {% endif %}
+			{% endwith %}
+			<div class="results-list">
 				{% for user in users %}
-					<p>{{ user.first_name }} {{ user.last_name }} rescued a {{ user.breed }} on {{ user.date.strftime('%m/%d/%Y at %H:%M') }}</p>
+				<p>
+					{{ user.first_name }} {{ user.last_name }} saved a {{ user.breed }} on {{ user.date.strftime('%m-%d-%Y') }}
+				</p>
 				{% endfor %}
 			</div>
 		</div><!-- container -->
