@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<h1>i'm working!</h1>
+		{{ results }}
+		<!-- <table>
+			<thead>
+				<th>name</th>
+				<th>continent</th>
+			</thead>
+			<tbody>
+				% for result in results %}
+				<tr>
+					<td>{ result['name'] }}</td>
+					<td>{ result['continent'] }}</td>
+				</tr>
+				% endfor %}
+			</tbody>
+		</table> -->
+		{% for result in results %}
+		<p> {{ result['name'] }} {{ result['continent'] }} </p>
+		{% endfor %}
+
+	</body>
+</html>
