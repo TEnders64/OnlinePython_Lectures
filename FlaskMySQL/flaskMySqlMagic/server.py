@@ -10,6 +10,7 @@ mysql = MySQLConnector(app, 'world')
 def reroute():
     # return redirect('/countries')
     return render_template('index.html')
+	
 @app.route('/countries')
 def index():
     result = mysql.query_db("SELECT * FROM countries ORDER BY population DESC")
