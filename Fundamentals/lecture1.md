@@ -55,11 +55,11 @@
 - Python Shell
 - Data Types
   - <b>Booleans</b>:  True/False
+  - <b>Strings</b>: "hello world"
   - <b>Ints, Floats</b>: 2, 2.5
   - <b>Lists</b>: [10, 'You', xyz, 50]
-  - <b>Dictionaries</b>:  {'city': 'Minneapolis'}
   - <b>Tuples</b>:  (False, "Heroes", 200)
-  - <b>Strings</b>: "hello world"
+  - <b>Dictionaries</b>:  {'city': 'Minneapolis'}
 - Indentation & Line Endings & Comments
   - Predict how many times the following loop will run.
 ```python
@@ -114,5 +114,10 @@
   - Fors, Whiles
     - Example ```for num in range(0,5):```
     - Example ```while 5 > 2:```
+
+- Import statements
+ - Python tries to be as lean as it can!
+ - But it has built in support for most things, if you import them
+ - from _ import _	 
 
 ####Demo Time: Odds And Evens
