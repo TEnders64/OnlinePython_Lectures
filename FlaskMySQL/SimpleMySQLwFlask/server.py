@@ -28,7 +28,7 @@ def login():
 	if errors:
 		return redirect('/')
 
-	query = "SELECT * FROM users WHERE email = :email"
+	query = "SELECT * FROM users WHERE email = :email LIMIT 1"
 	data = {
 		'email': request.form['email']
 	}
@@ -72,7 +72,7 @@ def register():
 	data = {
 		"first": request.form['first_name'],
 		"last": request.form['last_name'],
-		"email": request.form['email'],
+		"email": lower(request.form['email']),
 		"password": bcrypt.generate_password_hash(request.form['password'])
 	}
 	user_id = mysql.query_db(query, data)

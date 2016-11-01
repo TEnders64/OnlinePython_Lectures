@@ -16,6 +16,11 @@
 - Disappearing Ninja
 
 ####The Flask Mini-Framework
+- Who uses Flask?
+  - Lots of people!
+  - Pinterest
+  - Twilio
+  - LinkedIn uses it for their 'internal stack'
 - HTTP Request/Response Cycle
   - What's that look like again?
 - Where does Flask come in?
@@ -24,6 +29,7 @@
     - We can handle <form> data & validate it!
     - We can then do some logic and render pages (templates) with embedded Python in there!
     - We could redirect users elsewhere!
+
 
 #####GET & POST requests
 - GET requests
