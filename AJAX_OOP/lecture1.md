@@ -1,6 +1,6 @@
 #Python - AJAX & APIs
 ####New Changes
-- **Weekly Mentor Sessions Have a New Look ~ Moving to Slack**
+- **Change in Meeting Times**
   - More Responsive Help from your classmates and thosewho are ahead, plus Instructor & TAs
   - Could come in the form of a Text response, Hangout, or Screenhero
   - There are 3 **MUSTS** we ask you provide before reaching out for help...
