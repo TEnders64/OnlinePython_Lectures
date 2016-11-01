@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title>Weather Man</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				console.log('document is ready');
+
+				$('form').submit(function(){
+					console.log('form got submitted');
+					console.log( $('#location_input').val() )
+					$.get('api.openweathermap.org/data/2.5/weather?q='+ $('#location_input').val() +'&APPID=a58241d4fafcb5d73eb20f3608d813c9', function(data){
+						console.log(data);
+					})
+
+					return false;
+				});
+
+
+			});
+		</script>
+	</head>
+	<body>
+		<h1>The Weather:</h1>
+		<h2>Location: <span id="location">Undefined</span></h2>
+		<h3>Temperature: <span id="temp">72</span> degrees</h3>
+		<form class="location_form" action="#get_weather" method="post">
+			<input id="location_input" type="text" name="location" value="">
+			<input type="submit" name="name" value="Find Weather Near Me">
+		</form>
+	</body>
+</html>

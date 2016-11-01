@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<style media="screen">
+			.infobox {
+				padding: 5%;
+				margin: 30px;
+				background-color: #334;
+				color: palegreen;
+			}
+		</style>
+		<title>
+			{% if results %}
+			{{ results['name'] }}
+			{% else %}
+			New Country
+			{% endif %}
+
+		</title>
+	</head>
+	<body>
+		<h2>Basic Information: Edit</h2>
+		<div class="infobox">
+			{% if results %}
+			<form class="edit_form" action="/countries/{{results['id']}}" method="post">
+				<input type="hidden" name="hidden" value="{{results['id']}}"
+				<h4><input type="text" name="name" value=""></h4>
+				<h4><input type="text" name="region" value=""></h4>
+				<h4>Population: <input type="text" name="population" value=""></h4>
+				<h4>Gross National Product: <input type="text" name="gnp" value=""></h4>
+				<h4>Capital: <input type="text" name="capital" value=""></h4>
+				<input type="submit" name="name" value="Commit Edits">
+			</form>
+			{% else %}
+			<form class="create_form" action="/countries" method="post">
+				<h4>Country name: <input type="text" name="name" value="{{ results['name'] }}"></h4>
+				<h4>Region: <input type="text" name="region" value="{{ results['region'] }}"></h4>
+				<h4>Population: <input type="text" name="population" value="{{ results['population'] }}"></h4>
+				<h4>Gross National Product: <input type="text" name="gnp" value="{{ results['gnp'] }}"></h4>
+				<h4>Capital: <input type="text" name="capital" value="{{ results['country_capital'] }}"></h4>
+				<input type="submit" name="name" value="Create New Country">
+			</form>
+			{% endif %}
+		</div>
+	</body>
+</html>

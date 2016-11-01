@@ -6,25 +6,37 @@
 		<title></title>
 	</head>
 	<body>
-		<h1>i'm working!</h1>
-		{{ results }}
-		<!-- <table>
+		<h1>Countries of the World!</h1>
+		<table>
 			<thead>
 				<th>name</th>
-				<th>continent</th>
+				<th>region</th>
+				<th>population</th>
+				<th>gdp</th>
+				<!-- <th>main_language</th> -->
+				<th>capital</th>
+
 			</thead>
 			<tbody>
-				% for result in results %}
+				{% for result in results %}
 				<tr>
-					<td>{ result['name'] }}</td>
-					<td>{ result['continent'] }}</td>
+					<td><a href="/countries/{{ result['id'] }}">{{ result['name'] }}</a></td>
+					<td>{{ result['region'] }}</td>
+					<td>{{ result['population'] }}</td>
+					<td>{{ result['gnp'] }}</td>
+					<!-- <td>{ result['main_language'] }}</td> -->
+					<td>{{ result['country_capital'] }}</td>
+					<!-- <td>
+						<a href="/countries/{{ result['id'] }}/edit">edit</a>
+						<a href="#">delete</a>
+					</td> -->
 				</tr>
-				% endfor %}
+				{% endfor %}
 			</tbody>
-		</table> -->
-		{% for result in results %}
-		<p> {{ result['name'] }} {{ result['continent'] }} </p>
-		{% endfor %}
+		</table>
+		<a href="/countries/new">
+		<button type="button" name="button">Create new country</button>
+		</a>
 
 	</body>
 </html>

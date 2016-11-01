@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<style media="screen">
+			.infobox {
+				padding: 5%;
+				margin: 30px;
+				background-color: #334;
+				color: palegreen;
+			}
+		</style>
+		<title>{{ results['name'] }}</title>
+	</head>
+	<body>
+		<h2>Basic Information</h2>
+		<div class="infobox">
+			<h4>{{ results['name'] }}</h4>
+			<h4>{{ results['region'] }}</h4>
+			<h4>Population: {{ results['population'] }}</h4>
+			<h4>Gross National Product: {{ results['gnp'] }}</h4>
+			<h4>Capital: {{ results['country_capital'] }}</h4>
+			<a href="/countries/{{ results['id'] }}/edit">edit</a>
+			<a href="/countries/{{ results['id'] }}">delete</a>
+		</div>
+		<h2>Languages</h2>
+		<div class="infobox">
+			{% for language in languages %}
+			<p>
+				{{ language['language'] }}
+			</p>
+			{% endfor %}
+		</div>
+	</body>
+</html>
