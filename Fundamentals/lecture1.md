@@ -55,7 +55,7 @@
 - Python Shell
 - Data Types
   - <b>Booleans</b>:  True/False
-  - <b>Strings</b>: "hello world"
+  - <b>Strings</b>: "hello's world"
   - <b>Ints, Floats</b>: 2, 2.5
   - <b>Lists</b>: [10, 'You', xyz, 50]
   - <b>Tuples</b>:  (False, "Heroes", 200)
