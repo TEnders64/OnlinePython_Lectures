@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title>Login Page</title>
+		<style media="screen">
+			.red {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Login</h1>
+		<form class="login" action="/users/login" method="post">
+			<label for="username">username
+				<input type="text" name="login_username" value="">
+			</label>
+			<label for="first_name">first name
+				<input type="text" name="login_first_name" value="">
+			</label>
+			<label for="last_name">last name
+				<input type="text" name="login_last_name" value="">
+			</label>
+			<input type="submit" name="login_submit" value="Login">
+		</form>
+		<h1>Register</h1>
+		<form class="register" action="/users" method="post">
+			<label for="username">username
+				<input type="text" name="username" value="">
+			</label>
+			<label for="first_name">first name
+				<input type="text" name="first_name" value="">
+			</label>
+			<label for="last_name">last name
+				<input type="text" name="last_name" value="">
+			</label>
+			<label for="password">password
+				<input type="text" name="password" value="">
+			</label>
+			<input type="submit" name="reg_submit" value="Register">
+		</form>
+		{% with errors = get_flashed_messages() %}
+			{% if errors %}
+				{% for error in errors %}
+				<p class="red">{{ error }}</p>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+
+
+	</body>
+</html>

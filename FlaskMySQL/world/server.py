@@ -3,9 +3,8 @@ from mysqlconnection import MySQLConnector
 from flask_bcrypt import Bcrypt
 import re
 app = Flask(__name__)
-app.secret_key = "WAHIGHWJRBgousebtvkj2hqvkb326j3vucqawhmtx2qjg34x7um4crky2q3v6n4fue65xjrsd46wjh2c3"
+app.secret_key = "WA\HIGHWJR\Bgousebt\vkj2hqvkb3fue65xjrs\d4\6wjh2c3"
 bcrypt = Bcrypt(app)
-# app.url_map.strict_slashes = False
 
 mysql = MySQLConnector(app, "world")
 

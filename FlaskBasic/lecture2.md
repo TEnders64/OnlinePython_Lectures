@@ -1,12 +1,20 @@
 #Python - Flask Week Part 2
 
-####What Did We Learn Yesterday?
+####What Did We Learn Last Time?
 - Virtual Environments (Briefly)
   - Sandboxes where we can pile up every tool we need for the job.  We can reuse these in multiple projects!
 - Where Flask lives (server-side)
 - What Flask can provide so far...
   - Handling different requests to different routes via different methods: GET & POST
   - Delivering templates (render_template)
+- Get and POST requests:
+ - GET requests
+  - Links and redirects
+ - POST requests
+  - Forms package up information for us in an envelope and deliver it on a 'wire'
+  - ```<form action="/users" method="post">``` Here our 'wire' is the route ```/users```
+
+
 
 ####What We Are Going To Cover Today
 - More Jinja2 templating
