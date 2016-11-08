@@ -9,10 +9,10 @@
   - Delivering templates (render_template)
 - Get and POST requests:
  - GET requests
-  - Links and redirects
+   - Links and redirects
  - POST requests
-  - Forms package up information for us in an envelope and deliver it on a 'wire'
-  - ```<form action="/users" method="post">``` Here our 'wire' is the route ```/users```
+   - Forms package up information for us in an envelope and deliver it on a 'wire'
+   - ```<form action="/users" method="post">``` Here our 'wire' is the route ```/users```
 
 
 
