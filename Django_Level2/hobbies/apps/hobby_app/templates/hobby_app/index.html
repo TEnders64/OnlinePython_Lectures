@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title>
+		</title>
+	</head>
+	<body>
+		<h1>sweet.</h1>
+		<div class="hobbies">
+			{% load tz %}
+			{% for hobby in hobbies %}
+				{{ hobby.created_at|localtime }}
+				<p>{{ hobby.name }} {{ hobby.category }} {{ hobby.danger_level }}</p>
+			{% endfor %}
+		</div>
+
+		<form class="" action="/" method="post">
+			{% csrf_token %}
+			Name:<input type="text" name="name" value="">
+			Danger Level:<input type="number" name="danger_level" value="1">
+			Category:
+			<select class="" name="category">
+				{% for category in categories %}
+				<option title="{{ category }}" value="{{ category }}" >
+				{{ category }}
+				</option>
+				{% endfor %}
+			</select>
+
+			<input type="submit" name="submit" value="Create A New Hobby">
+		</form>
+	</body>
+</html>

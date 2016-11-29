@@ -22,7 +22,7 @@ class Cat(Mammal):
 		self.hunger = 0
 
 	def meow(self):
-		print "miao"
+		return "miao"
 	def sleep(self):
 		if self.hp < 20:
 			self.hp += 5
@@ -34,5 +34,5 @@ class Cat(Mammal):
 		print "chased a bird, hp are", self.hp
 
 
-squirrel = Cat("confused")
-print squirrel.hp, squirrel.number_of_legs
+miao = Cat("Miao")
+print miao.hp, miao.number_of_legs, miao.has_backbone, miao.meow()

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title>Jinja example with styling</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<h1>Hello {{ session['username'] }}!</h1>
+		<a href="/user/{{ session['username'] }}">This is a link!</a>
+		<h3>{{ session['awesome'] }}</h3>
+		<ul>
+			<h3 class="{{ style['class'] }}">Students</h3>
+			{% for person  in users['Students'] %}
+				<ul>
+						<li class="blue">{{ person.first_name }} {{ person.last_name }}, instructed by: {{ users['Instructors'][person.instructor].first_name }} {{ users['Instructors'][person.instructor].last_name }}</li>
+				</ul>
+			{% endfor %}
+		</ul>
+		<form class="" action="/submit" method="post">
+			<label for="first_name">first name: </label>
+			<input type="text" name="first_name" value="">
+			{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+			{% for category, message in messages %}
+				{% if category == 'first_name' %}
+					{{ message }}
+				{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+			<label for="last_name">last name: </label>
+			<input type="text" name="last_name" value="">
+			{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+			{% for category, message in messages %}
+				{% if category == 'last_name' %}
+					{{ message }}
+				{% endif %}
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+			<input type="hidden" name="form_id" value="buttons">
+			<label for="submit"></label>
+			<input type="submit" name="submit" value="submit the form!">
+		</form>
+	</body>
+</html>

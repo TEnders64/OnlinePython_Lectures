@@ -8,9 +8,9 @@
   - Handling different requests to different routes via different methods: GET & POST
   - Delivering templates (render_template)
 - Get and POST requests:
- - GET requests
+ - GET requests GET information from the server
    - Links and redirects
- - POST requests
+ - POST requests SEND information to the server
    - Forms package up information for us in an envelope and deliver it on a 'wire'
    - ```<form action="/users" method="post">``` Here our 'wire' is the route ```/users```
 
