@@ -6,6 +6,10 @@
  - Handles HTTP connection, requests, responses
  - How does the Request-Response cycle work again?
 
+![req res cycle](/image1.jpg)
+
+![req res cycle](/image2.jpg)
+
 
 
 - What is Flask?
