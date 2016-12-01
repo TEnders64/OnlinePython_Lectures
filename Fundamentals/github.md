@@ -1,7 +1,7 @@
 ####Github org code review process
 - Take a look at the org
 - Add Everyone's github account
-- Create a new org FirstnameLastname
+- Create a new repo FirstnameLastname
 - Create a project
 - Add remote
 - add, commit, push to remote

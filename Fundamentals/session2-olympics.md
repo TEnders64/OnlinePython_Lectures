@@ -1,4 +1,4 @@
-#Python Fundamentals Meeting 2
+#Python Fundamentals Session 2
 
 ####Questions?
 
