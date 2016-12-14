@@ -42,4 +42,3 @@ urlpatterns=[
 
  - `models.ManyToManyField(User)`
  - QuerySets work identically
- 
