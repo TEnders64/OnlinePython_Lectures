@@ -4,48 +4,49 @@
 
 ####What's OOP?
 - Object Oriented Programming
-  - Let's build objects that help us represent real-life objects! Crazy? Not really!
+  - An approach to avoid repeating ourselves and simplify debugging
+	- Considers things in terms of Classes and Instances
     - How would we represent a person?
       - Attributes/Properties - e.g. a Name and Age
       - Actions/Methods/Functions - e.g. Walk, Talk, Make
-    - We can toss these into a class to help us represent something over and over!
+
 ```
 class Person(object):
   def __init__(self):
-    self.name = "Todd"
-    self.age = 32
-    self.stamina = 100
+    self.name = "Michael"
+    self.age = 30
+    self.energy = 100
 
   def walk(self):
-    self.stamina -= 1
+    self.energy -= 1
 
   def talk(self):
-    print "Todd habla espanol un poco"
+    print "Hello there!"
 ```
   - Cool, but how do we create an <b>INSTANCE</b> of Person?
 ```
 person1 = Person()
 person1.talk()
 ```
-  - Okay, but this isn't practical.  Everyone is named 'Todd'?!
+  - Okay, but this isn't practical.  Everyone is named 'Michael'?!
 ```
 class Person(object):
   def __init__(self, name, age):
     self.name = name
     self.age = age
-    self.stamina = 100
+    self.energy = 100
 
   def walk(self):
-    self.stamina -= 1
+    self.energy -= 1
 
   def talk(self):
-    print "{} habla espanol un poco".format(self.name)
+    print "Hello, I'm {}!".format(self.name)
 
 person1 = Person('Michael', 30)
 person1.talk()
 ```
-  - That's DYNAMIC!  The <b>constructor</b> method let's us customize a bit more.
-  - <b>TAKEAWAY:</b> Instead of writing copious amounts of code with the potential for repetition, let's create a BLUEPRINT!
+  - That's DYNAMIC!  The <b>constructor</b> method lets us customize a bit more.
+  - <b>TAKEAWAY:</b> Instead of writing copious amounts of code with the potential for repetition, let's create a CUSTOMIZABLE BLUEPRINT!
 
 ####Inheritance
 - Our Person class looks a bit mundane doesn't it?
