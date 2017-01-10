@@ -1,14 +1,22 @@
 #Python - OOP
+
 ####Key Assignment
-- Animal
+- Animal (Tuesday)
+- Django: Survey Form (Thursday)
+
+Everything in OOP past Animal, and everything in Python Advanced Concepts, is Optional.
+
+_Do not let yourself get behind by spending too long on the optionals!_
 
 ####What's OOP?
-- Object Oriented Programming
-  - An approach to avoid repeating ourselves and simplify debugging
-	- Considers things in terms of Classes and Instances
-    - How would we represent a person?
-      - Attributes/Properties - e.g. a Name and Age
-      - Actions/Methods/Functions - e.g. Walk, Talk, Make
+Object Oriented Programming
+- An approach to avoid repeating ourselves and simplify debugging
+- Considers things in terms of Classes and Instances
+  - A Class is the ideal representation / blueprint for a thing, the Instance is the particular.
+	- From one blueprint, we can create many individual instances!
+  - How would we represent a person?
+    - Attributes/Properties - e.g. a Name and Age
+    - Actions/Methods/Functions - e.g. Walk, Talk, Make
 
 ```
 class Person(object):
@@ -45,7 +53,7 @@ class Person(object):
 person1 = Person('Michael', 30)
 person1.talk()
 ```
-  - That's DYNAMIC!  The <b>constructor</b> method lets us customize a bit more.
+  - That's DYNAMIC!  The <b>init</b> method lets us customize our attributes.
   - <b>TAKEAWAY:</b> Instead of writing copious amounts of code with the potential for repetition, let's create a CUSTOMIZABLE BLUEPRINT!
 
 ####Inheritance
