@@ -1,51 +1,29 @@
-class SinglyLinkedListNode(object):
-	def __init__(self, val):
-		self.val = val
-		self.next = None
-
-class SinglyLinkedList(object):
+class Vertebrate(object):
 	def __init__(self):
-		self.head = None
+		self.has_backbone = True
 
-	def addFront(self, val):
-		#if list is empty (head is None)
-		if not self.head:
-			self.head = SinglyLinkedListNode(val)
-		else:
-			#create a new node
-			#do something to save our old head node
-			#make our new node's Next pointer point to the old head node
-			#make the new node be the head node
-			node = SinglyLinkedListNode(val) #instantiates a new node
-			node.next = self.head
-			self.head = node
+class Bird(Vertebrate):
+	def __init__(self):
+		super(Bird, self).__init__()
+		self.feathers = True
+		self.warm_blooded = True
+		self.lays_eggs = True
 
-	def addBefore(self, val, next_val):
-		runner = self.head
-		if not runner:
-			raise NoHeadError('There is nothing in the list')
-		elif not runner.next:
-			if runner.val == next_val:
-				addFront(val)
-			else:
-				raise NextValNotInListError('The next val was not found')
-		else:
-			while runner.next:
-				if runner.next.val == next_val:
-					new_node = SinglyLinkedListNode(val)
-					rest_of_list = runner.next
-					runner.next = new_node
-					new_node.next = rest_of_list
-					return True
-				else:
-					runner = runner.next
-			raise NextValNotInListError('The next val was not found')
+class Lizard(Vertebrate):
+	def __init__(self):
+		super(Lizard, self).__init__()
+		self.warm_blooded = False
+		self.lays_eggs = True
+		self.has_scales = True
 
+class Dinosaur(Bird, Lizard):
+	def __init__(self):
+		super(Dinosaur, self).__init__()
+		self.feathers = False
 
-
-our_list = SinglyLinkedList()
-our_list.addFront(2)
-our_list.addFront(3)
-
-
-print our_list.head.val
+dino = Dinosaur()
+print dino.has_scales 		#True
+print dino.lays_eggs 			#True
+print dino.feathers 			#False
+print dino.warm_blooded 	#True <-- because it inherits from the left-most class if the attribute exists in multiple parent classes!~
+print dino.has_backbone		#True
