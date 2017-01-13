@@ -44,4 +44,11 @@ class Ninja(Human):
 
 ninja = Ninja(4, 'Doug')
 # person2 = Human('Kellen')
-ninja.speak().ninja_speak().code('Python').code('Javascript').show_languages().show_languages()
+ninja.speak().ninja_speak().code('Python').code('Javascript').show_languages()
+
+ninja.skills = 200
+ninja.pizza_budget = 60
+
+print ninja.pizza_budget
+
+print Ninja.skills
