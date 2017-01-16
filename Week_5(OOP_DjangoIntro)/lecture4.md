@@ -10,15 +10,24 @@
 
 Regular Expressions
 
-- basic characters
-- boundaries `^ $ \b`
-- word characters `\w`
-- digits `\d`
-- whitespace `\s`
-- character sets `[]`
-- repeats `? + *`
-- groups `()`
-- named groups `(?P<name>[])`
+- Basic Syntax
+- Ordinary characters
+- Escaping: "\"
+- Anything: "."
+- Start: "^"
+- End: "$"
+- Word characters: "\w", "\W"
+- Digit characters: "\d"
+- Boundaries and spaces: "\b", "\s"
+- Groups: "[a-zA-Z0-9]"
+- Repetitions: "\*", "+", "?"
+- Capture groups: "()"
+- Naming them: "(?P<name>)"
+
+####Further reading
+- [https://docs.python.org/3/library/re.html](https://docs.python.org/3/library/re.html)
+- [regexr.com](https://regexr.com)
+- [pythex.org](https://pythex.org)
 
 
 ### Django templates
@@ -84,4 +93,20 @@ project_name/ (outer)
 		urls.py
 		etc
 	manage.py
+```
+
+
+### Forms
+- With forms, we're still treating them the same way we did in Flask.  We either have POST information or GET information, but the difference in Django is that we get to use the `request` dictionary again to check for different methods.
+  - Need to check out what's inside a POST? `request.POST` has it.
+  - Need to check out what's inside a GET? `request.GET` has it.
+  - `request` is a one-stop shop
+- <b>Notable difference in forms themselves...</b>
+  - We need a <b>CSRF</b> token.  This is an added layer of security for our forms.  If the CSRF token is unrecognized, then Django won't accept it.
+```
+<form action="/users" method="post">
+  {% csrf_token %}
+  Name: <input type="text" name="name" />
+  <input type="submit" value="Submit" />
+</form>
 ```
