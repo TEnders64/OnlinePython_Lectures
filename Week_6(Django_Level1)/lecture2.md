@@ -58,3 +58,8 @@ class User (models.Model):
 ```
 - We've updated the User model to create an instance of UserManager.
 - The UserManager class houses our heavier logic and will be our new ORM that replaces the older version of `objects`
+
+
+### Demo: Put Models on demo project
+
+[Jack's ORM assignment](https://github.com/madjaqk/sports_orm)

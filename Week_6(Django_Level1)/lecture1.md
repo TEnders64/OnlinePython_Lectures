@@ -55,4 +55,4 @@ def show_users():
 - But in our templates, we should only use dot notation `request.session.username`
 
 
-#### Demoing Session
+#### Demo: Session
