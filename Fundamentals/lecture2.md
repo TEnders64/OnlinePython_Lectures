@@ -1,7 +1,7 @@
 #Python Fundamentals Lecture 2
 
-####Key Assignment This Week
-- <b>Names</b>
+####Key Assignments This Week
+- <b>Scores & Grades, Names</b>
 ![alt text](NamesAssignment.png "DICTIONARIES!!!")
 
 ####Less Talk More Loops
@@ -42,12 +42,21 @@ for val in myTuple:
 #Accessing
 print myTuple[2]
 
-#Unpacking: Use a Tuple to unpack a Tuple
+#Unpacking: Use an equal-lengthed Tuple to unpack a Tuple
 (x, y, z) = myTuple
 
 print x, y, z
 ```
 ####Q&A
 
-####Demo
-- Draw Stars
+####Group Activity: Get Your Python Chops
+1. Build a function that takes in a list of numbers and a value.  Multiply each number in the list by the value given and return the updated list.
+2. Build a function that takes in a dictionary.  Print the key and value of each key-value pair like so: 
+```
+Your dictionary has the following inside:
+key1 : value1
+key2 : value2
+key3 : value3
+...
+```
+3. Create a function that will examine the range of numbers from 1 to 100.  If a number is divisible by 3, print "fizz", if a number is divisible by 5, print "buzz", if a number is divisible by 3 and 5, print "fizzbuzz"
