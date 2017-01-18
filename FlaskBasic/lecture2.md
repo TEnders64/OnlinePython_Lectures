@@ -11,8 +11,7 @@
   - Delivering templates (render_template)
 
 ####What We Are Going To Cover Today
-- More Jinja2 templating
-- Session vs Cookie
+- Session
 - Hidden Inputs
 
 ####Jinja2 Is Our Engine, You Are The Driver
@@ -49,15 +48,61 @@ def form_results():
   return render_template('results.html', username=request.form['username'])
 ```
 
-####Session vs Cookie vs Flash
-- Session is server-side, cookies are on your browser
-  - We can identify someone in Flask using the cookie file we store on their browser
+####Session
+How do we use it? What's it good for?
+  - Session is just a dictionary!
   - Session can be used to stash information temporarily until that user logs out or we set a timer
   - Session storage is sparse!
-- Flash Data lives for only one request/response cycle as opposed to session!
+
+```python
+from Flask import ..., session
+app = Flask(__name__)
+
+app.secret_key = "thisissecret"
+
+@app.route('/')
+def index():
+  try session['counter']:
+    session['counter'] += 1
+  except:
+    session['counter'] = 1
+  return render_template('index.html')
+
+app.run(debug=True)
+```
+  - Can we access session from a template or only server.py?
+  - Dot-notation or ['key'] notation?
+
+####Flash vs Session
+Flash Data lives for only <b>ONE</b> request/response cycle as opposed to session!
+
+Example:
+`server.py`
+```python
+from flask import ..., flash
+
+
+@app.route('/')
+def index():
+  flash('now you see me...')
+  return render_template('index.html')
+```
+
+`index.html`
+```html
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+```
 
 ####Hidden Inputs
-- Hidden inputs allow us to pack more information into a form without the user knowing it
+Hidden inputs allow us to pack more information into a form without the user knowing it
   - When would this be useful?  
     1. What if there are multiple forms on a page?  Which one got submitted?
     2. Identifying who's logged in and trying to create comments (think: Facebook)
