@@ -1,7 +1,7 @@
 #Python - Flask Week Part 2
 
 ####What Did We Learn Yesterday?
-- Virtual Environments (Briefly)
+- Virtual Environments
   - Sandboxes where we can pile up every tool we need for the job.  We can reuse these in multiple projects!
 - Request/Response cycle
 - Where Flask lives (server-side)
@@ -11,6 +11,7 @@
 
 ####What We Are Going To Cover Today
 - Session
+- Flash
 - Hidden Inputs
 
 ####Jinja2 Is Our Engine, You Are The Driver
