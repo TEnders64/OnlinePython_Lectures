@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Success</title>
+</head>
+<body>
+  <h1>Success! Welcome {{request.session.user}}!</h1>
+  <p>Successfully Registered (or logged in)</p>
+  <a href="{% url '_index' %}">Go Back</a>
+</body>
+</html>

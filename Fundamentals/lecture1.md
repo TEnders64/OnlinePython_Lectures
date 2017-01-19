@@ -5,41 +5,26 @@
 - Yellow Belts
 - Slack Communication
   - Slack Team: **Coding Dojo Online**
+  - Slack Channel: **python-online** & **python-everyone**
 
 ####What You're Going To Get
-- **Weekly Mentor Sessions Have a New Look ~ Moving to Slack**
-  - More Responsive Help from your classmates and thosewho are ahead, plus Instructor & TAs
-  - Could come in the form of a Text response, Hangout, or Screenhero
-  - There are 3 **MUSTS** we ask you provide before reaching out for help...
-    1. Put your code in a GitHub **repository**, **gist** or Slack **snippet**
-    2. Articulate what **you think** the problem is
-    3. List what you’ve already tried to solve the problem
 
 - **Code Reviews**
   - Keep Submitting Your Code to the Learning Platform
-  - Key Assignments will be code reviewed
-    - **WEEK 1** Scores & Grades, Names
-    - **WEEK 2** Ninja Gold, Disappearing Ninjas (Flask)
-    - **WEEK 3** Sakila
-    - **WEEK 4** The Wall
-    - **WEEK 5** Ajax Notes
-    - **WEEK 6** Ninja Gold, Disappearing Ninjas (Django)
-    - **WEEK 7** Semi-Restful Routes, Belt Reviewer
-    - **WEEK 8** Black Belt Week! No Code Reviews
-  - Push your assignments to GitHub repos and send the link to your repo to me on Slack in a DM.  I can code review and submit pull requests to you!
+  - Key Assignments will be code reviewed as a group on Fridays (and recorded) and individually
+    - **Check the Python I post in Slack**
+    
 - **Algorithms**
-  - The Algorithms Slack Channel is where all things Algorithms will take place.  With the algorithm book in hand, you will self-pace but have a place to discuss them with other students and instructors/TAs.
+  - The algos-online and algos-everyone Slack Channels are where all things Algorithms will take place. 
 - **8 weeks of Python instruction**
   - 4 sessions a week
-    - Prompt us for topics/demos to discuss in more depth
-  - Tuesday/Thursday 4pm Pacific Wednesday/Friday 2pm Pacific
-  - We commence **October 28th**
+    - Prompt us for topics/demos to discuss in more depth (especially if you can't be there)
+  - Monday/Wednesday 5pm Pacific Tuesday/Thursday 3:30pm Pacific
 
 ####Expectations For You
-- 20 hours a week
+- 20+ hours a week
 - Read materials before class
 - Don't wait until it's too late!
-- On-site Pace vs Online Pace
 
 ####This Month's Outlook
 - Week 1: Python Fundamentals
@@ -56,7 +41,7 @@
   - <b>Numbers</b>: 2, 2.5
   - <b>Lists</b>: [10, 'You', xyz, 50]
   - <b>Dictionaries</b>:  {'city': 'Sheboygan'}
-  - <b>Tuples</b>:  (False, {'user': 'Felix'})
+  - <b>Tuples</b>:  (False, {'user': 'Felix'}) or (1,2,4)
   - <b>Strings</b>: "hello world"
 - Indentation & Line Endings & Comments
   - Predict how many times the following loop will run.
@@ -113,4 +98,4 @@
     - Example ```for num in range(0,5):```
     - Example ```while 5 > 2:```
 
-####Demo Time: Odds And Evens
+####Demo Time: Sum List

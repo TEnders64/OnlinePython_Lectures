@@ -3,17 +3,23 @@ from __future__ import unicode_literals
 from django.db import models
 
 # Create your models here.
-class User(models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    email = models.EmailField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    # objects = QUERY MACHINE!!!!
+class UserManager (models.Manager):
+      def login(self, **kwargs):
+          user = User.objects.get(email=kwargs['email'])
+          if user[0]:
 
-class Book(models.Model):
-    title = models.CharField(max_length=255)
-    users = models.ManyToManyField('User')
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    # objects = QUERY MACHINE!!!!
+              return (True, user[0])
+          else:
+              return (False, "Email/Password not found")
+
+      def register(self, **kwargs):
+          return (False, errors_list)
+
+class User (models.Model):
+      first_name = models.CharField(max_length=45)
+      last_name = models.CharField(max_length=45)
+      email = models.EmailField()
+      password = models.CharField(max_length=100)
+      created_at = models.DateTimeField(auto_now_add = True)
+      updated_at = models.DateTimeField(auto_now = True)
+      objects = UserManager()
