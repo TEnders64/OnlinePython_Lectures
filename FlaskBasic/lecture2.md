@@ -62,7 +62,7 @@ app.secret_key = "thisissecret"
 
 @app.route('/')
 def index():
-  try session['counter']:
+  try:
     session['counter'] += 1
   except:
     session['counter'] = 1
@@ -84,8 +84,12 @@ from flask import ..., flash
 
 @app.route('/')
 def index():
-  flash('now you see me...')
   return render_template('index.html')
+
+@app.route('/process')
+def process():
+  flash('now you see me...')
+  return redirect('/')
 ```
 
 `index.html`
