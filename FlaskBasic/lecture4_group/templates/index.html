@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Jinja and Flask Fun</h1>
+  <h3>You've visited this page {{session['counter']}} time(s)!</h3>
+  <h4>Check out my unordered list of identical links!</h4>
+  <ul>
+    {% for i in range(4) %}
+    <li><a href="/dojos">{{i}}. Dojos</a></li>
+    {% endfor %}
+  </ul>
+  <form action="/results" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

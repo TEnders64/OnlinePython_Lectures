@@ -1,0 +1,11 @@
+li{
+  display: inline-block;
+}
+.long{
+  color: red;
+  background-color: black;
+}
+.short{
+  color: green;
+  background-color: purple;
+}

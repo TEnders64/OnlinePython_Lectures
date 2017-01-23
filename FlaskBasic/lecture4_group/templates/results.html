@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>You've submitted this form {{session['submissions']}} times</h1>
+  {% if long_name %}
+    <h3 class="long">{{username}} is a long username</h3>
+  {% else %}
+    <h3 class="short">{{username}} is a short username</h3>
+  {% endif %}
+</body>
+</html>
