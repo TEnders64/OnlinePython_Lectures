@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- results.html -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Result Page</title>
+  </head>
+  <body>
+    <h1>You've submitted this form {{session['counter']}} time(s)!</h1>
+    <p>Here are your results:</p>
+    <p>Name: {{name}}</p>
+    <p>Email: {{email}}</p>
+    <p>Rating: {{rating}}</p>
+    {% if session['counter'] > 2 %}
+    <h3>You must love submitting surveys</h3>
+    {% endif %}
+    <a href="/">Go Back</a>
+  </body>
+</html>
