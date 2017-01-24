@@ -16,4 +16,8 @@ def process():
         session['counter'] += 1
     return render_template('results.html', name=request.form['name'], email=request.form['email'], rating=request.form['rating'])
 
+@app.route('/dojos')
+def dojos():
+    return redirect('/')
+
 app.run(debug=True)
