@@ -59,7 +59,22 @@ class User (models.Model):
 - We've updated the User model to create an instance of UserManager.
 - The UserManager class houses our heavier logic and will be our new ORM that replaces the older version of `objects`
 
+### Group Assignment (Sports_ORM)
+- Download the Sports_ORM assignment
+- Test your queries by modifying the existing queries inside the context dictionary in the index method
+- Copy/paste the working queries into the three .md files below the questions
+- Prosper!
 
-### Demo: Put Models on demo project
+
+##### Look through the documentation!
 
 [Jack's ORM assignment](https://github.com/madjaqk/sports_orm)
+
+
+#### Tips
+- Start with whatever you want your output to be
+- Filter to limit the bounds
+- Step through relationships using __ then access their attributes like normal
+	```
+	Player.objects.filter(curr_team__league__name="American Conference of Amateur Football")
+	```
