@@ -5,4 +5,6 @@
 - Belt Reviewer (Thursday)
 - Belt Reviewer Deployed (Friday)
 
-#### Office Hour 
+#### Office Hour
+- Let's look at your integration projects
+- Let's demo that a little maybe
