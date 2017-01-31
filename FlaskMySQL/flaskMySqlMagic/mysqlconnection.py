@@ -1,4 +1,4 @@
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql import text
 # Create a class that will give us an object that we can use to connect to a database
 class MySQLConnection(object):
