@@ -1,5 +1,10 @@
 #Python - Flask + MySQL Week ( THE WALL WEEK )
-####Lemo - Continue Building the Users App Using Semi-RESTful routes
+####Lemo - Day 1 of UsersApp
+
+####Activity - Continue Building the Users App
+Add the feature to add a User
+![alt text](Py1_UsersApp_Day2.png "Users App Day 2")
+
 ####RESTful routing
 - A convention for naming your routes so that we can understand them just by reading them
 - E.G.
