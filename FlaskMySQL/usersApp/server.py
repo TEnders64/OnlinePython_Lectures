@@ -29,4 +29,28 @@ def create():
     # redirect out
     return redirect('/')
 
+@app.route('/users/<id>')
+def show(id):
+    # form a query to get a user
+    query = "SELECT * FROM users WHERE id = :id"
+    data = {
+        'id': id
+    }
+    # hit the db with it
+    user = mysql.query_db(query, data)
+    # render the SHOW template with user info
+    return render_template('show.html', user=user[0])
+
+@app.route('/users/<id>/delete')
+def destroy(id):
+    # form a query to delete a user
+    query = "DELETE FROM users WHERE id = :id"
+    data = {
+        'id': id
+    }
+    # hit the db with it
+    mysql.query_db(query, data)
+    # redirect to index
+    return redirect('/')
+    
 app.run(debug=True)

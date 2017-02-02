@@ -1,0 +1,14 @@
+Show Feature:
+Create a link to the show page on INDEX template
+<a href="/users/<id>">
+
+Create a route
+  in server.py...
+    /users/<id> (GET request)
+
+Build a SHOW template
+  Display a user's information
+  Link to home => index route
+  don't forget <title> tag
+
+Delete Feature:
