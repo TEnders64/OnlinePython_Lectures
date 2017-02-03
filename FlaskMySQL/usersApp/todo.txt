@@ -1,0 +1,41 @@
+Registration
+Route a form to some register method
+  1. validate the form inputs
+    No empties
+    Name -
+      More than 2 characters
+      No numbers
+    Email -
+      Use email regex to determine if it's valid
+    Password & Confirm Match
+      Length >= 8
+  2. if valid then
+      Encrypt the password using Bcrypt
+      Insert into DB
+      Set user id in session
+      Redirect to All Users Page
+  3. if invalid then
+      send flash messages
+      redirect to the register page
+
+Login
+Route a form to a login method
+  1. Validate the form inputs to a degree
+    No empties
+    Email -
+      Use email regex
+    Password -
+  2. If invalid inputs
+    flash & redirect
+  3. If valid inputs
+    Query the DB for user based on Email
+    - If no email matches
+      flash("email/password combo not found")
+      REDIRECT IMMEDIATELY!!!
+    + If we DO get an email match
+      Use Bcrypt to checked the guessed password
+      If TRUE
+        store user id in session
+        redirect to Users home page
+      if False
+        flash & redirect to login page 

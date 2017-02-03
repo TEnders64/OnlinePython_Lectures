@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users App</title>
+</head>
+<body>
+  <h1>Users App</h1>
+  <a href="/logout">Logout</a>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Created</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{user['name']}}</td>
+        <td>{{user['email']}}</td>
+        <td>{{user['created_at'].strftime('%B %Y')}}</td>
+        <td><a href="/users/{{user['id']}}">Show</a> | <a href="/users/{{user['id']}}/delete">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <form action="/users" method="post">
+    <input type="text" name="name">
+    <input type="text" name="email">
+    <input type="submit" value="New User">
+  </form>
+</body>
+</html>

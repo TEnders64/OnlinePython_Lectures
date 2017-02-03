@@ -2,32 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Users App</title>
+  <title>Users App Log/Reg</title>
 </head>
 <body>
-  <h1>Users App</h1>
-  <table>
-    <thead>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Created</th>
-      <th>Actions</th>
-    </thead>
-    <tbody>
-      {% for user in users %}
-      <tr>
-        <td>{{user['name']}}</td>
-        <td>{{user['email']}}</td>
-        <td>{{user['created_at'].strftime('%B %Y')}}</td>
-        <td><a href="/users/{{user['id']}}">Show</a> | <a href="/users/{{user['id']}}/delete">Delete</a></td>
-      </tr>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <p>{{message}}</p>
       {% endfor %}
-    </tbody>
-  </table>
-  <form action="/users" method="post">
-    <input type="text" name="name">
-    <input type="text" name="email">
-    <input type="submit" value="New User">
+    {% endif %}
+  {% endwith %}
+  <h1>Users App</h1>
+  <h2>Register</h2>
+  <form action="/register" method="post">
+    <p>Name: <input type="text" name="name"></p>
+    <p>Email: <input type="text" name="email"></p>
+    <p>Password: <input type="password" name="password"></p>
+    <p>Confirm: <input type="password" name="confirm"></p>
+    <input type="submit" value="Register">
+  </form>
+  <h2>Login</h2>
+  <form action="/login" method="post">
+    <p>Email: <input type="text" name="email"></p>
+    <p>Password: <input type="password" name="password"></p>
+    <input type="submit" value="Login">
   </form>
 </body>
 </html>
