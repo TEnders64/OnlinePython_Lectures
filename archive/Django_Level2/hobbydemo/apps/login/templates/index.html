@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<h1>Please Register here.</h1>
+		<div class="row">
+			<div class="columns three">
+				<form class="register_form" action="/register" method="post">
+					{% csrf_token %}
+					<label for="first_name">First Name:</label>
+					<input type="text" name="first_name" value="">
+					<label for="last_name">Last Name:</label>
+					<input type="text" name="last_name" value="">
+					<label for="password">Password:</label>
+					<input type="password" name="password" value="">
+					<label for="confirm_password">Confirm Password:</label>
+					<input type="password" name="confirm_password" value="">
+					<label for="submit"></label>
+					<input class="button-primary" type="submit" name="name" value="Register">
+				</form>
+			</div>
+			<div class="columns nine">
+				{% if messages %}
+					{% for message in messages %}
+					<p>{{ message }}</p>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+		{% for user in users %}
+		<p>{{ user.first_name }} {{ user.last_name }}</p>
+		{% endfor %}
+	</body>
+</html>

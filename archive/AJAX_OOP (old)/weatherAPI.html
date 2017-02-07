@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenWeather Demo</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script>
+    //6e66c5cd70846fd210b493c10d876730
+    $(document).ready(function(){
+      $('form').submit(function(){
+
+        var city = $('#city').val();
+
+        $.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&units=imperial&APPID=6e66c5cd70846fd210b493c10d876730', function(data){
+          console.log(data);
+          $('#temperature').html('Temperature: '+data.main.temp+ 'C ');
+			 $('#country').html(data.sys.country)
+			 $('#submitted_city').html(data.name);
+        });
+
+        return false;
+      });
+
+    });
+  </script>
+</head>
+<body>
+  <form action="#">
+    <input type="text" id="city" />
+    <input type="submit" value="Search Weather">
+  </form>
+  <h1 id="submitted_city">No City Chosen <h1>
+  <span id="country"></span>
+  <h4 id="temperature">Temperature: n/a</h4>
+</body>
+</html>

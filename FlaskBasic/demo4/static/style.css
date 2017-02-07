@@ -1,0 +1,16 @@
+* {
+	background-color: aqua;
+}
+.red {
+	color: red;
+}
+.gold {
+	color: gold;
+}
+.blue {
+	color: blue;
+}
+
+p.error {
+	color: #d22;
+}

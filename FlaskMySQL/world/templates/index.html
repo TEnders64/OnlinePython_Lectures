@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title></title>
+	</head>
+	<body>
+		<h1>Countries of the World!</h1>
+		<table>
+			<thead>
+				<th>name</th>
+				<th>region</th>
+				<th>population</th>
+				<th>gdp</th>
+				<!-- <th>main_language</th> -->
+				<th>capital</th>
+
+			</thead>
+			<tbody>
+				{% for result in results %}
+				<tr>
+					<td><a href="/countries/{{ result['id'] }}">{{ result['name'] }}</a></td>
+					<td>{{ result['region'] }}</td>
+					<td>{{ result['population'] }}</td>
+					<td>{{ result['gnp'] }}</td>
+					<!-- <td>{ result['main_language'] }}</td> -->
+					<td>{{ result['country_capital'] }}</td>
+					<!-- <td>
+						<a href="/countries/{{ result['id'] }}/edit">edit</a>
+						<a href="#">delete</a>
+					</td> -->
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<a href="/countries/new">
+		<button type="button" name="button">Create new country</button>
+		</a>
+
+	</body>
+</html>

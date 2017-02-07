@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<title>Countries</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				console.log('document is ready');
+
+				$.get('/render_partial', function(res){
+					// console.log(res);
+					$('#tbody').html(res);
+					return false;
+				})
+
+				$(document).on('click', 'a.delete', function(){
+					console.log('link was clicked');
+					console.log( $(this) );
+					var link = $(this).attr('link');
+					$.get(link, function(res){
+						console.log('we are in the callback function of the .get method')
+						// console.log(res);
+						$('#tbody').html(res);
+						return false;
+					});
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Countries of the World!</h1>
+		<marquee>Hi i'm a marquee</marquee>
+		<table>
+			<thead>
+				<th>name</th>
+				<th>region</th>
+				<th>population</th>
+				<th>gdp</th>
+				<!-- <th>main_language</th> -->
+				<th>capital</th>
+
+			</thead>
+			<tbody id="tbody">
+
+			</tbody>
+		</table>
+		<a href="/countries/new">
+		<button type="button" name="button">Create new country</button>
+		</a>
+
+	</body>
+</html>

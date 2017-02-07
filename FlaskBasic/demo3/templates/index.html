@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="/static/normalize.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" rel="stylesheet">
+		<link rel="stylesheet" href="/static/style.css">
+		<title>Adopt-a-Pup: Home</title>
+	</head>
+	<body>
+		<header>
+			<h1 class="center">Here at Adopt-a-Pup,</h1>
+			<h2 class="center">we believe that no puppies should go unloved.</h2>
+		</header>
+		<div class="container">
+			<div class="row">
+				<div class="column one-half">
+					<form action="/adopt" method="post">
+						<label for="breed">I want to adopt a:</label>
+						<select name="breed">
+							<option value="Husky">Husky</option>
+							<option value="Dachsund">Dachsund</option>
+							<option value="Shiba">Shiba</option>
+							<option value="Akita">Akita</option>
+							<option value="Pomeranian">Pomeranian</option>
+							<option value="Corgie">Corgie</option>
+							<option value="Dalmatian">Dalmatian</option>
+							<option value="Maltese">Maltese</option>
+							<option value="Poodle">Poodle</option>
+							<option value="Mixed Breed">Mixed Breed</option>
+						</select>
+						<label for="first_name">My name is:</label>
+						<input type="text" name="first_name" >
+						<input type="text" name="last_name" >
+						<label for="email">My email address is:</label>
+						<input type="email" name="email" value="">
+						<div class="row">
+							<input type="submit" name="submit" class="button-primary" value="I want one!">
+						</div>
+					</form>
+				</div>
+				<div class="column one-half">
+					<img class="puppy-pic" src="static/img/puppy-love.jpg" alt="" />
+				</div>
+			</div><!-- row -->
+			<div class="flashed-messages">
+				{% with messages = get_flashed_messages() %}
+				  {% if messages %}
+				    <ul class=flashes>
+				    {% for message in messages %}
+				      <li>{{ message }}</li>
+				    {% endfor %}
+				    </ul>
+				  {% endif %}
+				{% endwith %}
+			</div>
+			<div class="adopters">
+				{% for user in users %}
+					<p>{{ user.first_name }} {{ user.last_name }} rescued a {{ user.breed }} on {{ user.date.strftime('%m/%d/%Y at %H:%M') }}</p>
+				{% endfor %}
+			</div>
+		</div><!-- container -->
+	</body>
+</html>

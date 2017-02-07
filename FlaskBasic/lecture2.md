@@ -8,13 +8,38 @@
 - What Flask can provide so far...
   - Handling different requests to different routes via different methods: GET & POST
   - Delivering templates (render_template)
+- Get and POST requests:
+ - GET requests GET information from the server
+   - Links and redirects
+ - POST requests SEND information to the server
+   - Forms package up information for us in an envelope and deliver it on a 'wire'
+   - ```<form action="/users" method="post">``` Here our 'wire' is the route ```/users```
 
+#### Recap questions:
+- what goes in our server.py file?
+- what is a server?
+- what does a server do?
+- where do our templates live?
+- what is a template?
+
+
+
+<<<<<<< HEAD
+#### What We Are Going To Cover Today
+- Jinja2 templating
+- Session vs Cookie
+=======
 ####What We Are Going To Cover Today
 - Session
 - Flash
+>>>>>>> 1924a6b9620bdf455c9927ec882595d7cb782631
 - Hidden Inputs
+- Request/Response cycle
+- Building it out!
 
-####Jinja2 Is Our Engine, You Are The Driver
+
+
+#### Jinja2 Is Our Engine, You Are The Driver
 - Embedded Python and passing data into our 'views' (templates)
 ```html
 <html>
@@ -48,9 +73,15 @@ def form_results():
   return render_template('results.html', username=request.form['username'])
 ```
 
+<<<<<<< HEAD
+#### Session vs Cookie vs Flash
+- Session is server-side, cookies are on your browser
+  - We can identify someone in Flask using the cookie file we store on their browser
+=======
 ####Session
 How do we use it? What's it good for?
   - Session is just a dictionary!
+>>>>>>> 1924a6b9620bdf455c9927ec882595d7cb782631
   - Session can be used to stash information temporarily until that user logs out or we set a timer
   - Session storage is sparse!
 
@@ -105,8 +136,13 @@ def process():
 {% endwith %}
 ```
 
+<<<<<<< HEAD
+#### Hidden Inputs
+- Hidden inputs allow us to pack more information into a form without the user knowing it
+=======
 ####Hidden Inputs
 Hidden inputs allow us to pack more information into a form without the user knowing it
+>>>>>>> 1924a6b9620bdf455c9927ec882595d7cb782631
   - When would this be useful?  
     1. What if there are multiple forms on a page?  Which one got submitted?
     2. Identifying who's logged in and trying to create comments (think: Facebook)
@@ -119,3 +155,5 @@ Hidden inputs allow us to pack more information into a form without the user kno
   <input type="submit" value="Add Comment">
 </form>
 ```
+
+![alt text](FlaskReqResCycle.png "Request/Response Cycle")

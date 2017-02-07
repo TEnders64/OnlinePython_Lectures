@@ -3,6 +3,8 @@ import random
 app = Flask(__name__)
 app.secret_key = "ThisIsSecret"
 
+dicti = {}
+print dicti.get('waffle')
 @app.route('/')
 def index():
     if not session.get('number'):

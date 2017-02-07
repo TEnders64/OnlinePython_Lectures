@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		{% for country in countries %}
+			<p>
+				{{ country['name'] }}
+				{{ country['continent'] }}
+				<a href="/countries/{{ country['id'] }}/edit">edit</a>
+				<a href="/countries/{{ country['id'] }}/delete">delete</a>
+			</p>
+		{% endfor %}
+		<form class="creation" action="index.html" method="post">
+			name<input type="text" name="name" value="">
+			{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			{% for message in messages %}
+			<p>
+				{{ message }}
+			</p>
+			{% endfor %}
+			{% endif %}
+			{% endwith %}
+			continent<input type="text" name="continent" value="">
+			form of government<input type="text" name="government_form" value="">
+			head of state<input type="text" name="head_of_state" value="">
+			<input type="submit" name="name" value="">
+		</form>
+		<div class="">
+
+
+		</div>
+	</body>
+</html>

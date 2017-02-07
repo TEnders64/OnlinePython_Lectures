@@ -1,0 +1,15 @@
+
+{% for result in results %}
+<tr>
+	<td><a href="#" link="/countries/{{ result['id'] }}">{{ result['name'] }}</a></td>
+	<td>{{ result['region'] }}</td>
+	<td>{{ result['population'] }}</td>
+	<td>{{ result['gnp'] }}</td>
+	<!-- <td>{ result['main_language'] }}</td> -->
+	<td>{{ result['country_capital'] }}</td>
+	<td>
+		<a href="#" link="/countries/{{ result['id'] }}/edit">edit</a>
+		<a href="#" class="delete" link="/countries/{{ result['id'] }}/delete">delete</a>
+	</td>
+</tr>
+{% endfor %}

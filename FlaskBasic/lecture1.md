@@ -1,6 +1,10 @@
 #Python - Flask Week
 
 ####Where Are We?
+- What assignments are you working on?
+
+- Upload your weekly key assignment! Tomorrow is Code Review Day! (Names)
+
 - We've learned Python
   - Those fundamentals are going to come in handy!
 - Now where?
@@ -8,9 +12,16 @@
 
 ####This Week's Key Assignments
 - Ninja Gold
-- Registration
+- Registration Form
+- Disappearing Ninja
+
 
 ####The Flask Mini-Framework
+- Who uses Flask?
+  - Lots of people!
+  - Pinterest
+  - Twilio
+  - LinkedIn uses it for their 'internal stack'
 - HTTP Request/Response Cycle
   - What's that look like again?
 - Where does Flask come in?
@@ -19,6 +30,7 @@
     - We can handle <form> data & validate it!
     - We can then do some logic and render pages (templates) with embedded Python in there!
     - We could redirect users elsewhere!
+
 
 #####GET & POST requests
 - GET requests

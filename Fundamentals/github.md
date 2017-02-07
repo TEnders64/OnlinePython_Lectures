@@ -1,0 +1,13 @@
+####Github org code review process
+- Take a look at the org
+- Add Everyone's github account
+- Create a new repo FirstnameLastname
+- Create a project
+- Add remote
+- add, commit, push to remote
+- Pull someone's repo down
+- Make edits
+- I push the changes
+- You should be notified
+- Take a look at the diffs
+- Benefits: get used to collaborating with git, and Github, code reviews are more efficient
