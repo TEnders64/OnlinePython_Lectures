@@ -26,3 +26,11 @@
 - What do we do before then?
   - Prep/create our DB through an ERD and Forward Engineering
   - Provide this information to the MySQL connection file
+
+####Activity: Users App
+Build a Users App that displays users like below
+
+![alt text](Py1_UsersApp_Day1.png "Users App Day 1")
+
+- Come up with a game plan for how to start
+  - Do we do HTML first or the Database?

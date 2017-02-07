@@ -1,9 +1,10 @@
 #Python - Flask Week Part 2
 
-#### What Did We Learn Last Thursday?
-- Virtual Environments (Briefly)
+####What Did We Learn Yesterday?
+- Virtual Environments
   - Sandboxes where we can pile up every tool we need for the job.  We can reuse these in multiple projects!
-- Where Flask lives (server)
+- Request/Response cycle
+- Where Flask lives (server-side)
 - What Flask can provide so far...
   - Handling different requests to different routes via different methods: GET & POST
   - Delivering templates (render_template)
@@ -23,9 +24,15 @@
 
 
 
+<<<<<<< HEAD
 #### What We Are Going To Cover Today
 - Jinja2 templating
 - Session vs Cookie
+=======
+####What We Are Going To Cover Today
+- Session
+- Flash
+>>>>>>> 1924a6b9620bdf455c9927ec882595d7cb782631
 - Hidden Inputs
 - Request/Response cycle
 - Building it out!
@@ -66,15 +73,76 @@ def form_results():
   return render_template('results.html', username=request.form['username'])
 ```
 
+<<<<<<< HEAD
 #### Session vs Cookie vs Flash
 - Session is server-side, cookies are on your browser
   - We can identify someone in Flask using the cookie file we store on their browser
+=======
+####Session
+How do we use it? What's it good for?
+  - Session is just a dictionary!
+>>>>>>> 1924a6b9620bdf455c9927ec882595d7cb782631
   - Session can be used to stash information temporarily until that user logs out or we set a timer
   - Session storage is sparse!
-- Flash Data lives for only one request/response cycle as opposed to session!
 
+```python
+from Flask import ..., session
+app = Flask(__name__)
+
+app.secret_key = "thisissecret"
+
+@app.route('/')
+def index():
+  try:
+    session['counter'] += 1
+  except:
+    session['counter'] = 1
+  return render_template('index.html')
+
+app.run(debug=True)
+```
+  - Can we access session from a template or only server.py?
+  - Dot-notation or ['key'] notation?
+
+####Flash vs Session
+Flash Data lives for only <b>ONE</b> request/response cycle as opposed to session!
+
+Example:
+`server.py`
+```python
+from flask import ..., flash
+
+
+@app.route('/')
+def index():
+  return render_template('index.html')
+
+@app.route('/process')
+def process():
+  flash('now you see me...')
+  return redirect('/')
+```
+
+`index.html`
+```html
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+```
+
+<<<<<<< HEAD
 #### Hidden Inputs
 - Hidden inputs allow us to pack more information into a form without the user knowing it
+=======
+####Hidden Inputs
+Hidden inputs allow us to pack more information into a form without the user knowing it
+>>>>>>> 1924a6b9620bdf455c9927ec882595d7cb782631
   - When would this be useful?  
     1. What if there are multiple forms on a page?  Which one got submitted?
     2. Identifying who's logged in and trying to create comments (think: Facebook)

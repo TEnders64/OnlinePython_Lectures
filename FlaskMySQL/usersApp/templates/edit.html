@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{user['name']}}'s Edit Page</title>
+</head>
+<body>
+  <h1>{{user['name']}}'s Edit Page</h1>
+  <form action="/users/{{user['id']}}" method="post">
+    <input type="text" name="name" value="{{user['name']}}">
+    <input type="text" name="email" value="{{user['email']}}">
+    <input type="submit" value="Update User">
+  </form>
+  <a href="/users">home</a> <a href="/users/{{user['id']}}">show</a>
+</body>
+</html>

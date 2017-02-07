@@ -2,26 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login Reg App</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <title>Document</title>
 </head>
 <body>
-  <h1>Registration</h1>
-  <form action="{% url 'register' %}" method="post">
-    {% csrf_token %}
-    <label for="first">First Name: <input type="text" name="first" id="first" /></label>
-    <label for="last">Last Name: <input type="text" name="last" id="last" /></label>
-    <label for="email">Email: <input type="text" name="email" id="email" /></label>
-    <label for="password">Password: <input type="password" name="password" id="password" /></label>
-    <label for="c_password">Confirm Password: <input type="password" name="c_password" id="c_password" /></label>
-    <input type="submit" class="button-primary" value="Register">
-  </form>
-  <h1>Login</h1>
-  <form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    <label for="email">Email: <input type="text" name="email" id="email" /></label>
-    <label for="password">Password: <input type="password" name="password" id="password" /></label>
-    <input type="submit" class="button-primary" value="Login">
-  </form>
+  <h1>Language Dashboard</h1>
+  {% for language in languages %}
+  <p>{{language.name}}</p>
+  {% endfor %}
 </body>
 </html>
