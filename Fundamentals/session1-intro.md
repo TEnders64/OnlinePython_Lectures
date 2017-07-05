@@ -1,39 +1,33 @@
-#Python Fundamentals Session 1
+# Python Fundamentals Session 1
 
-####Administrative
+#### Administrative
 - Track access?
 - Slack Communication
   - Slack Team: **Coding Dojo Online**
-  - Slack Channel: **python-online** & **python-everyone**
+  - Slack Channel: **python-1**
+  
+#### What You're Going To Get
 
-####What You're Going To Get
-
-- **Code Reviews**
-  - Keep Submitting Your Code to the Learning Platform
-  - Key Assignments will be code reviewed as a group on Fridays (and recorded) and individually
+**Code Reviews**
+  - Group code reviews on Fridays (and recorded) at 11am Pacific
     - **Check the Python I post in Slack**
 
-- **Algorithms**
-  - The algos-online and algos-everyone Slack Channels are where all things Algorithms will take place.
-- **8 weeks of Python instruction**
-  - 4 sessions a week
-    - Prompt us for topics/demos to discuss in more depth (especially if you can't be there)
-  - Monday/Wednesday 5pm Pacific Tuesday/Thursday 3:30pm Pacific
+**Python-1 consists of 4 weeks of Python then you'll join Python-2**
 
-####Expectations For You
-- 20+ hours a week
+#### Expectations For You
+- 25+ hours a week
 - Read materials before class
 - Don't wait until it's too late!
 
-####This Month's Outlook
+#### This Month's Outlook
 - Week 1: Python Fundamentals
 - Week 2: Flask
 - Week 3: MySQL
 - Week 4: Flask + MySQL (Wall Week)
 
-####Let's Look At This Week's Checklist
+#### Let's Look At This Week's Checklist
 
-####Let's Talk Python
+#### Let's Talk Python
 - Python Shell
 - Data Types
   - <b>Booleans</b>:  True/False
@@ -102,10 +96,4 @@
 - Loops
   - Fors, Whiles
     - Example ```for num in range(0,5):```
-    - Example ```while 5 > 2:```
-
-
-- Import statements
- - Python tries to be as lean as it can!
- - But it has built in support for most things, if you import them
- - from _ import _	 
+    - Example ```while 5 > 2:``` 
